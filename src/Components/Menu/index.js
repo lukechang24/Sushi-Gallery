@@ -1,14 +1,29 @@
 import React, { Component } from "react"
+import Tabletop from "tabletop"
+
 import FreshRolls from "./FreshRolls"
 import CookedRolls from "./CookedRolls"
+import Sushi from "./Sushi"
 
 import S from "./style"
 
 class Menu extends Component {
     state = {
-        currentTab: "Fresh Rolls"
+        currentTab: "Fresh Rolls",
+        data: {}
     }
     componentDidMount() {
+        Tabletop.init(
+            {
+                key: '1FrbltyDxYZzZ2AH90UZN91dCfjqS-fbHCfbf0vldBkE',
+                callback: googleData => {
+                    this.setState({
+                        data: googleData
+                    })
+                    console.log("data", googleData)
+                },
+            }
+        )
         this.addHover()
     }
     componentDidUpdate() {
@@ -41,15 +56,22 @@ class Menu extends Component {
                 </S.TabContainer>
                 <S.Title>{this.state.currentTab}</S.Title>
                 {
+                    this.state.currentTab === "Fresh Rolls" || this.state.currentTab === "Cooked Rolls"
+                        ?
+                            <S.Message>*hover to see more details</S.Message>
+                        :
+                            null
+                }
+                {
                     this.state.currentTab === "Fresh Rolls"
                         ?
-                            <FreshRolls />
+                            <FreshRolls freshRolls={this.state.data.freshRolls}/>
                         :
                     this.state.currentTab === "Cooked Rolls"
                         ?
-                            <CookedRolls />
+                            <CookedRolls cookedRolls={this.state.data.cookedRolls}/>
                         :
-                            "what"
+                            <Sushi />
                 }
             </S.Container1>
         )

@@ -9,6 +9,7 @@ S.RollContainer = styled.div`
     justify-content: center;
     grid-column-gap: 50px;
     grid-row-gap: 25px;
+    margin-bottom: 25px;
 `
 
 S.Roll = styled.div`
@@ -21,36 +22,49 @@ S.Roll = styled.div`
     justify-content: space-between;
     border: 1.5px solid black;
     &.show :nth-child(3) {
-        display: flex;
+        visibility: visible;
         flex-direction: column;
-
+        opacity: 0.9;
     }
 `
 S.RollImg = styled.img`
     height: 80%;
 `
+
 S.RollName = styled.h3`
     height: 20%;
     display:flex;
     align-items: center;
     justify-content: center;
 `
+
 S.InfoContainer = styled.div`
-    display: none;
+    visibility: hidden;
     width: 100%;
-    height: 100%;
+    height: 80%;
     position: absolute;
     background-color: white;
-    opacity: 0.8;
-    transition: display, 1s;
-`
-S.InfoTitle = styled.h3`
-
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
 `
 
+S.InfoTitle = styled.h2`
+    padding-left: 5px;
+    margin-bottom: 2px;
+`
 
 S.Info = styled.p`
+    padding-left: 5px;
+`
 
+S.Price = styled.p`
+    position: absolute;
+    right: 5px;
+    font-size: 20px;
+`
+
+S.Bold = styled.span`
+    font-weight: bolder;
 `
 
 export default S

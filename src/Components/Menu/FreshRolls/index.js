@@ -1,29 +1,40 @@
 import React from "react"
 import S from "./style"
-import roll from "../Images/roll.jpg"
 
-
-const FreshRolls = () => {
-    return(
-        <S.RollContainer>
-            <S.Roll className="roll">
-                <S.RollImg src={roll}></S.RollImg>
-                <S.RollName>California Roll</S.RollName>
+const FreshRolls = (props) => {
+    const freshRolls = props.freshRolls ? props.freshRolls.elements : []
+    const rollList = freshRolls.map((roll, i) => {
+        console.log(roll, "roll")
+        return(
+            <S.Roll key={i} className="roll">
+                <S.RollImg src={roll.url}></S.RollImg>
+                <S.RollName>{roll.name}</S.RollName>
                 <S.InfoContainer>
+                <S.Price>${roll.price}</S.Price>
                     <S.InfoTitle>Ingredients</S.InfoTitle>
-                    <S.Info>blah blah blah blah blah</S.Info>
-                    <S.Info>blah blah blah blah blah</S.Info>
+                    {
+                        roll.base
+                            ?
+                                <S.Info><S.Bold>Base: </S.Bold>{roll.base}</S.Info>
+                            :
+                                <S.Info><S.Bold>In: </S.Bold>{roll.in}</S.Info>
+
+                    }
+                    {
+                        roll.top
+                            ?
+                                <S.Info><S.Bold>Top: </S.Bold>{roll.top}</S.Info>
+                            :
+                                <S.Info><S.Bold>Out: </S.Bold>{roll.out}</S.Info>
+
+                    }
                 </S.InfoContainer>
             </S.Roll>
-            <S.Roll className="roll">
-
-            </S.Roll>
-            <S.Roll className="roll">
-
-            </S.Roll>
-            <S.Roll className="roll">
-
-            </S.Roll>
+        )
+    })
+    return(
+        <S.RollContainer>
+            {rollList}
         </S.RollContainer>
     )
 }

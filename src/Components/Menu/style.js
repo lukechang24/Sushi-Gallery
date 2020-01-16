@@ -8,15 +8,23 @@ S.Container1 = styled.div`
     flex-direction: column;
     align-items: center;
 `
+
 S.TabContainer = styled.div`
     display: flex;
 `
+
 S.Tab = styled.button`
 
 `
+
 S.Title = styled.h2`
     text-align: center;
-    margin: 75px 0 25px;
+    margin: 50px 0 15px;
+`
+
+S.Message = styled.small`
+    font-style: italic;
+    margin: 5px;
 `
 
 export default S
