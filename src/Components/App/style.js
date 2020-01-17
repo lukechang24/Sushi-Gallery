@@ -6,8 +6,10 @@ S.AppContainer = styled.div`
     display: flex;
 `
 S.EmptySpace = styled.div`
-    width: 20%;
-    background-color: red;
+    width: 25%;
+    @media only screen and (max-width: 992px) {
+        display: none;
+    }
 `
 
 export default S

@@ -9,20 +9,10 @@ import Contact from "../Contact"
 import S from "./style"
 
 function App() {
-  const isMobileDevice = () => (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
-  console.log(isMobileDevice())
   return (
     <S.AppContainer>
-      {
-        isMobileDevice()
-          ?
-            null
-          :
-            <>
-            <Navbar />
-            <S.EmptySpace></S.EmptySpace>
-            </>
-      }
+      <Navbar />
+      <S.EmptySpace></S.EmptySpace>
       <Switch>
         <Route path="/menu" render={() => <Menu />}></Route>
         <Route path="/about" render={() => <About />}></Route>

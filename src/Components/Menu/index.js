@@ -4,6 +4,7 @@ import Tabletop from "tabletop"
 import FreshRolls from "./FreshRolls"
 import CookedRolls from "./CookedRolls"
 import Sushi from "./Sushi"
+import Sides from "./Sides"
 
 import S from "./style"
 
@@ -41,6 +42,13 @@ class Menu extends Component {
         })
     }
     changeTab = (e) => {
+        const active = document.querySelectorAll(".active")
+        if(active.length > 0) {
+            for(let i = 0; i < active.length; i++) {
+                active[i].classList.remove("active")
+            }
+        }
+        e.currentTarget.className = e.currentTarget.className += " active"
         this.setState({
             currentTab: e.target.innerText
         })
@@ -49,7 +57,7 @@ class Menu extends Component {
         return(
             <S.Container1>
                 <S.TabContainer>
-                    <S.Tab onClick={this.changeTab}>Fresh Rolls</S.Tab>
+                    <S.Tab className="active" onClick={this.changeTab}>Fresh Rolls</S.Tab>
                     <S.Tab onClick={this.changeTab}>Cooked Rolls</S.Tab>
                     <S.Tab onClick={this.changeTab}>Sushi</S.Tab>
                     <S.Tab onClick={this.changeTab}>Sides</S.Tab>
@@ -71,7 +79,11 @@ class Menu extends Component {
                         ?
                             <CookedRolls cookedRolls={this.state.data.cookedRolls}/>
                         :
-                            <Sushi />
+                    this.state.currentTab === "Sushi"
+                        ?
+                            <Sushi sushi={this.state.data.sushi}/>
+                        :
+                            <Sides sides={this.state.data.sides}/>
                 }
             </S.Container1>
         )
