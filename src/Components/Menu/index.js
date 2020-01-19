@@ -11,7 +11,8 @@ import S from "./style"
 class Menu extends Component {
     state = {
         currentTab: "Fresh Rolls",
-        data: {}
+        data: {},
+        loading: true
     }
     componentDidMount() {
         Tabletop.init(
@@ -19,9 +20,9 @@ class Menu extends Component {
                 key: '1FrbltyDxYZzZ2AH90UZN91dCfjqS-fbHCfbf0vldBkE',
                 callback: googleData => {
                     this.setState({
-                        data: googleData
+                        data: googleData,
+                        loading: false
                     })
-                    console.log("data", googleData)
                 },
             }
         )
@@ -71,6 +72,10 @@ class Menu extends Component {
                             null
                 }
                 {
+                    this.state.loading
+                        ?
+                            <S.Spinner className="fas fa-circle-notch fa-spin"></S.Spinner>
+                        :
                     this.state.currentTab === "Fresh Rolls"
                         ?
                             <FreshRolls freshRolls={this.state.data.freshRolls}/>

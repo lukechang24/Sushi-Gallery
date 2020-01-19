@@ -9,6 +9,7 @@ S.Container1 = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 50px;
+    margin-bottom: 50px;
     @media only screen and (max-width: 992px) {
         padding: 10px;
     }
