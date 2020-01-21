@@ -6,7 +6,7 @@ S.Container1 = styled.div`
     position: relative;
     width: 75%;
     height: 100vh;
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 1040px) {
         width: 100%;
     }
 `

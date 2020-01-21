@@ -7,7 +7,7 @@ S.AppContainer = styled.div`
 `
 S.EmptySpace = styled.div`
     width: 25%;
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 1040px) {
         display: none;
     }
 `

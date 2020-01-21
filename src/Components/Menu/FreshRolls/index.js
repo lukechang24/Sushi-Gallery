@@ -4,7 +4,6 @@ import S from "./style"
 const FreshRolls = (props) => {
     const freshRolls = props.freshRolls ? props.freshRolls.elements : []
     const rollList = freshRolls.map((roll, i) => {
-        console.log(roll, "roll")
         return(
             <S.Roll key={i} className="roll">
                 <S.RollImg src={roll.url}></S.RollImg>

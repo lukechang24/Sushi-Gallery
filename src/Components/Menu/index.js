@@ -63,7 +63,15 @@ class Menu extends Component {
                     <S.Tab onClick={this.changeTab}>Sushi</S.Tab>
                     <S.Tab onClick={this.changeTab}>Sides</S.Tab>
                 </S.TabContainer>
-                <S.Title>{this.state.currentTab}</S.Title>
+                {
+                    this.state.currentTab === "Sushi" || this.state.currentTab === "Sides"
+                        ?
+                            <S.TitleDiv>
+                                <S.Title>{this.state.currentTab}</S.Title>
+                            </S.TitleDiv>
+                        :
+                            <S.Title>{this.state.currentTab}</S.Title>
+                }
                 {
                     this.state.currentTab === "Fresh Rolls" || this.state.currentTab === "Cooked Rolls"
                         ?

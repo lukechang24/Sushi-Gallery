@@ -4,7 +4,6 @@ import S from "../FreshRolls/style"
 const CookedRolls = (props) => {
     const cookedRolls = props.cookedRolls ? props.cookedRolls.elements : []
     const rollList = cookedRolls.map((roll, i) => {
-        console.log(roll, "roll")
         return(
             <S.Roll key={i} className="roll">
                 <S.RollImg src={roll.url}></S.RollImg>

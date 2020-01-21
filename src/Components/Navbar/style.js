@@ -12,7 +12,7 @@ S.Navbar = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 1040px) {
         display: none;
     }
 `

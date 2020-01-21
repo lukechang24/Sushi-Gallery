@@ -5,7 +5,7 @@ const Sides = (props) => {
     const sides = props.sides ? props.sides.elements : []
     const sidesList = sides.map((side, i) => {
         return(
-            <S.Item>
+            <S.Item key={i}>
                 <S.Name>{side.name}</S.Name>
                 <S.Price>${side.price}</S.Price>
             </S.Item>
