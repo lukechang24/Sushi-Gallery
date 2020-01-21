@@ -3,7 +3,7 @@ import styled from "styled-components"
 const S = {}
 
 S.Container1 = styled.div`
-    width: 55%;
+    width: 70%;
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;
@@ -47,5 +47,6 @@ S.Name = styled.p`
 S.Price = styled.p`
 
 `
+
 
 export default S

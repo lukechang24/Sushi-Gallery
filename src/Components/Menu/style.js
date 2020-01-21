@@ -19,6 +19,9 @@ S.Container1 = styled.div`
 S.TabContainer = styled.div`
     display: flex;
     margin-top: 10px;
+    @media only screen and (max-width: 1040px) {
+        display: none;
+    }
 `
 
 S.Tab = styled.button`
@@ -34,7 +37,7 @@ S.Tab = styled.button`
 `
 
 S.TitleDiv = styled.div`
-    width: 55%;
+    width: 70%;
     background-color: antiquewhite;
     margin-top: 25px;
     padding: 0 50px;
@@ -61,6 +64,34 @@ S.Message = styled.small`
     margin: 5px;
 `
 
+S.ArrowDiv = styled.div`
+    position: fixed;
+    left: ${props => props.left ? props.left : null};
+    right: ${props => props.right ? props.right : null};
+    top: calc(100vh / 2);
+    display: hidden;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 1040px) {
+        display: block;
+    }
+`
+
+S.ArrowName = styled.p`
+    width: 100px;
+    font-size: 15px;
+`
+
+S.LeftArrow = styled.i`
+    font-size: 40px;
+    color: grey;
+`
+
+S.RightArrow = styled.i`
+    font-size: 40px;
+    color: grey;
+`
+
 S.Spinner = styled.i`
     font-size: 50px;
     margin-top: 200px;
@@ -68,5 +99,4 @@ S.Spinner = styled.i`
         margin-top: 100px;
     }
 `
-
 export default S

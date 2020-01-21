@@ -3,18 +3,19 @@ import styled from "styled-components"
 const S = {}
 
 S.RollContainer = styled.div`
-    width: 100%;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+    grid-template-columns: repeat(auto-fill, minmax(275px, 275px));
     justify-content: center;
     grid-column-gap: 50px;
     grid-row-gap: 25px;
+    margin: 0px 25px 25px;
     margin-bottom: 25px;
 `
 
 S.Roll = styled.div`
     position: relative;
-    width: 300px;
+    width: 275px;
     height: 200px;
     background-color: white;
     display: flex;

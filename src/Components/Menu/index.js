@@ -10,6 +10,7 @@ import S from "./style"
 
 class Menu extends Component {
     state = {
+        tabs: ["Fresh Rolls", "Cooked Rolls", "Sushi", "Sides"],
         currentTab: "Fresh Rolls",
         data: {},
         loading: true
@@ -54,9 +55,23 @@ class Menu extends Component {
             currentTab: e.target.innerText
         })
     }
+    handleArrow = (e) => {
+        const curIndex = this.state.tabs.indexOf(this.state.currentTab)
+        const curTab = e.target.id === "-" ? (curIndex === 0 ? this.state.tabs[this.state.tabs.length-1] : this.state.tabs[curIndex-1]) : curIndex === this.state.tabs.length-1 ? this.state.tabs[0] : this.state.tabs[curIndex+1]
+        this.setState({
+            currentTab: curTab
+        })
+        window.scrollTo(0, 0)
+    }
     render() {
         return(
             <S.Container1>
+                <S.ArrowDiv left="5px">
+                    <S.LeftArrow className="fas fa-chevron-left" id="-" onClick={this.handleArrow}></S.LeftArrow>
+                </S.ArrowDiv>
+                <S.ArrowDiv right="5px">
+                    <S.RightArrow className="fas fa-chevron-right" id="+" onClick={this.handleArrow}></S.RightArrow>
+                </S.ArrowDiv>
                 <S.TabContainer>
                     <S.Tab className="active" onClick={this.changeTab}>Fresh Rolls</S.Tab>
                     <S.Tab onClick={this.changeTab}>Cooked Rolls</S.Tab>
