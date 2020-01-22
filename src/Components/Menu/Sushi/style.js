@@ -3,7 +3,7 @@ import styled from "styled-components"
 const S = {}
 
 S.Container1 = styled.div`
-    width: 70%;
+    width: 55%;
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;

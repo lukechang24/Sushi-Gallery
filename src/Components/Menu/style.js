@@ -37,7 +37,7 @@ S.Tab = styled.button`
 `
 
 S.TitleDiv = styled.div`
-    width: 70%;
+    width: 55%;
     background-color: antiquewhite;
     margin-top: 25px;
     padding: 0 50px;
@@ -94,9 +94,9 @@ S.RightArrow = styled.i`
 
 S.Spinner = styled.i`
     font-size: 50px;
-    margin-top: 200px;
+    margin-top: calc(100vh / 2 - 150px);
     @media only screen and (max-width: 1040px) {
-        margin-top: 100px;
+        margin-top: calc(100vh / 2 - 75px);
     }
 `
 export default S

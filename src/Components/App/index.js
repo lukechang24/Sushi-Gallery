@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Route, Switch, Redirect } from "react-router-dom"
 
 import Navbar from "../Navbar"
@@ -17,20 +17,30 @@ const My404 = () => {
   )
 }
 
-function App() {
-  return (
-    <S.AppContainer>
-      <Navbar />
-      <S.EmptySpace></S.EmptySpace>
-      <Switch>
-        <Route exact path="/" render={() => <Home />}></Route>
-        <Route path="/menu" render={() => <Menu />}></Route>
-        <Route path="/about" render={() => <About />}></Route>
-        <Route path="/contact" render={() => <Contact />}></Route>
-        <Route component={My404}></Route>
-      </Switch>
-    </S.AppContainer>
-  );
+class App extends Component {
+  handleNav = (e) => {
+
+  }
+  render() {
+    return (
+      <S.AppContainer>
+        <Navbar />
+        <S.EmptySpace></S.EmptySpace>
+        <S.Hamburger onClick={this.handleNav}>
+          <S.Line></S.Line>
+          <S.Line></S.Line>
+          <S.Line></S.Line>
+        </S.Hamburger>
+        <Switch>
+          <Route exact path="/" render={() => <Home />}></Route>
+          <Route path="/menu" render={() => <Menu />}></Route>
+          <Route path="/about" render={() => <About />}></Route>
+          <Route path="/contact" render={() => <Contact />}></Route>
+          <Route component={My404}></Route>
+        </Switch>
+      </S.AppContainer>
+    )
+  }
 }
 
 export default App;
