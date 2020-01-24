@@ -1,8 +1,18 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 const S = {}
 
+const fadeIn = keyframes`
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
 S.RollContainer = styled.div`
+    animation: 0.5s ${fadeIn} ease-out;
     width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(275px, 275px));

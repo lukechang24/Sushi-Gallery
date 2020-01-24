@@ -69,11 +69,10 @@ S.ArrowDiv = styled.div`
     left: ${props => props.left ? props.left : null};
     right: ${props => props.right ? props.right : null};
     top: calc(100vh / 2);
-    display: hidden;
-    display: flex;
-    flex-direction: column;
+    display: none;
     @media only screen and (max-width: 1040px) {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 `
 
@@ -84,12 +83,12 @@ S.ArrowName = styled.p`
 
 S.LeftArrow = styled.i`
     font-size: 40px;
-    color: grey;
+    color: black;
 `
 
 S.RightArrow = styled.i`
     font-size: 40px;
-    color: grey;
+    color: black;
 `
 
 S.Spinner = styled.i`

@@ -29,9 +29,9 @@ class Home extends Component {
     render() {
         return(
             <S.Container1>
-                <S.Background className="slide" url="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"></S.Background>
-                <S.Background className="slide" opacity="0" url="https://www.channelfutures.com/files/2019/10/Focus-877x432.jpg"></S.Background>
-                <S.Background className="slide" opacity="0" url="https://static.techspot.com/images2/news/bigimage/2019/08/2019-08-08-image-18.jpg"></S.Background>
+                <S.Background className="slide" url="https://images.pexels.com/photos/858501/pexels-photo-858501.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></S.Background>
+                <S.Background className="slide" opacity="0" url="https://images.pexels.com/photos/1422384/pexels-photo-1422384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></S.Background>
+                <S.Background className="slide" opacity="0" url="https://images.pexels.com/photos/3147493/pexels-photo-3147493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></S.Background>
             </S.Container1>
         )
     }
