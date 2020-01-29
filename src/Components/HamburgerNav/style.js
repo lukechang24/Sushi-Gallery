@@ -14,18 +14,14 @@ S.Hamburger = styled.div`
     background-color: black;
     &.active {
         & :nth-child(1) {
-            /* position: relative;
-            top: 7.5px; */
-            transform: translate(0, 7.5px) rotate(45deg);
+            transform: translate(0, 8px) rotate(45deg);
         }
         & :nth-child(2) {
             transform: translate(-5px, 0);
             opacity: 0;
         }
         & :nth-child(3) {
-            /* position: relative;
-            bottom: 7.5px; */
-            transform: translate(0, -7.5px) rotate(-45deg);
+            transform: translate(0, -8px) rotate(-45deg);
         }
     }
     @media only screen and (max-width: 1040px) {

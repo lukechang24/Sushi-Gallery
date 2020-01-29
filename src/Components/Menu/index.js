@@ -20,6 +20,7 @@ class Menu extends Component {
             {
                 key: '1FrbltyDxYZzZ2AH90UZN91dCfjqS-fbHCfbf0vldBkE',
                 callback: googleData => {
+                    console.log(googleData, "here")
                     this.setState({
                         data: googleData,
                         loading: false
@@ -109,7 +110,7 @@ class Menu extends Component {
                         :
                     this.state.currentTab === "Sushi"
                         ?
-                            <Sushi sushi={this.state.data.sushi}/>
+                            <Sushi data={this.state.data} sushi={this.state.data.sushi}/>
                         :
                             <Sides sides={this.state.data.sides}/>
                 }

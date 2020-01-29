@@ -6,7 +6,7 @@ import S from "./style"
 const HamburgerNav = (props) => {
     return(
         <>
-            <S.Hamburger onClick={props.handleNav}>
+            <S.Hamburger id="hamburger" onClick={props.handleNav}>
                 <S.Line></S.Line>
                 <S.Line></S.Line>
                 <S.Line></S.Line>
@@ -15,7 +15,7 @@ const HamburgerNav = (props) => {
                 props.showNav
                     ?
                         <S.Container1>
-                            <SmallNav />
+                            <SmallNav hideNav={props.hideNav}/>
                         </S.Container1>
                     :
                         null

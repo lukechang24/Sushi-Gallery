@@ -11,6 +11,7 @@ S.Container1 = styled.div`
     padding: 0 50px 25px;
     margin-bottom: 50px;
     @media only screen and (max-width: 1040px) {
+        width: 65%;
         padding: 0 10px 10px;
     }
 `
@@ -45,7 +46,7 @@ S.Name = styled.p`
 `
 
 S.Price = styled.p`
-
+    margin-left: 10px;
 `
 
 

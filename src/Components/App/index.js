@@ -33,11 +33,16 @@ class App extends Component {
       showNav: !this.state.showNav
     })
   }
+  hideNav = () => {
+    this.setState({
+      showNav: false
+    })
+  }
   render() {
     return (
       <S.AppContainer>
         <Navbar />
-        <HamburgerNav showNav={this.state.showNav} handleNav={this.handleNav}/>
+        <HamburgerNav showNav={this.state.showNav} handleNav={this.handleNav} hideNav={this.hideNav}/>
         <S.EmptySpace></S.EmptySpace>
         <Switch>
           <Route exact path="/" render={() => <Home />}></Route>

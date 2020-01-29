@@ -1,8 +1,11 @@
 import React from "react"
+import S from "./style"
 
 const About = () => {
     return(
-        "About"
+        <S.Container1>
+            <S.Title>About Sushi Gallery</S.Title>
+        </S.Container1>
     )
 }
 
