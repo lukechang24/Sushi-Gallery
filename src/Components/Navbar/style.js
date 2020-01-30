@@ -76,5 +76,18 @@ S.Circle = styled.div`
     background-color: white;
 `
 
+S.Location = styled.p`
+    width: 60%;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+`
+
+S.Hours = styled.p`
+    color: white;
+    text-align: center;
+`
+
 
 export default S

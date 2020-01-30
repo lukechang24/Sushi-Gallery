@@ -4,7 +4,8 @@ import S from "./style"
 const About = () => {
     return(
         <S.Container1>
-            <S.Title>About Sushi Gallery</S.Title>
+            <S.Title>About Us</S.Title>
+            <S.About>Sushi Gallery is a family-owned sushi restaurant running for 15 years.</S.About>
         </S.Container1>
     )
 }

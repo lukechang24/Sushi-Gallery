@@ -12,7 +12,7 @@ S.Container1 = styled.div`
     margin-bottom: 50px;
     @media only screen and (max-width: 1040px) {
         width: 65%;
-        padding: 0 10px 10px;
+        padding: 0 3% 10px;
     }
 `
 

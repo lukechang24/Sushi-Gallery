@@ -17,4 +17,8 @@ S.Title = styled.h1`
     margin-top: 50px;
 `
 
+S.About = styled.p`
+    
+`
+
 export default S

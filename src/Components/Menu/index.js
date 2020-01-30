@@ -21,6 +21,7 @@ class Menu extends Component {
                 key: '1FrbltyDxYZzZ2AH90UZN91dCfjqS-fbHCfbf0vldBkE',
                 callback: googleData => {
                     console.log(googleData, "here")
+                    const data = googleData
                     this.setState({
                         data: googleData,
                         loading: false

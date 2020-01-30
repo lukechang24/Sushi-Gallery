@@ -15,6 +15,11 @@ const Navbar = () => {
                 <S.Circle></S.Circle>
                 <S.Icon href="https://www.instagram.com/sushigalleryoki/" target="_blank" title="Instagram" color="white" className="fab fa-instagram"></S.Icon>
             </S.SocialContainer>
+            <S.Location>16436 Norwalk Blvd Cerritos, CA 90703</S.Location>
+            <S.Hours>Hours<br/>
+                Mon – Sat : 11:30 – 2:30pm & 5:00pm - 9:00pm<br/>
+                Sun : Close
+            </S.Hours>
         </S.Navbar>
     )
 }

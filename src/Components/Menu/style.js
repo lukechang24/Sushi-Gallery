@@ -43,7 +43,7 @@ S.TitleDiv = styled.div`
     padding: 0 50px;
     @media only screen and (max-width: 1040px) {
         width: 65%;
-        padding: 0 10px;        
+        padding: 0 3%;        
         margin-top: 25px;
     }
 `
