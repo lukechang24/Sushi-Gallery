@@ -99,4 +99,5 @@ S.Spinner = styled.i`
         margin-top: calc(100vh / 2 - 75px);
     }
 `
+
 export default S

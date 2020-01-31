@@ -51,6 +51,7 @@ class App extends Component {
           <Route path="/contact" render={() => <Contact />}></Route>
           <Route component={My404}></Route>
         </Switch>
+        <S.Footer></S.Footer>
       </S.AppContainer>
     )
   }

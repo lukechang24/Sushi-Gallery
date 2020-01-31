@@ -16,6 +16,13 @@ S.Navbar = styled.div`
         display: none;
     }
 `
+
+S.TitleDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+`
+
 S.Title = styled(NavLink)`
     font-family: "Brownies";
     letter-spacing: 2px;
@@ -31,7 +38,7 @@ S.LinkContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 25px;
+    margin-bottom: 50px;
 `
 
 S.Link = styled(NavLink)`
@@ -56,7 +63,7 @@ S.SocialContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-bottom: 100px;
 `
 
 S.Icon = styled.a`
@@ -76,18 +83,20 @@ S.Circle = styled.div`
     background-color: white;
 `
 
-S.Location = styled.p`
-    width: 60%;
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    margin-top: 50px;
-`
-
 S.Hours = styled.p`
+    font-size: 13px;
     color: white;
     text-align: center;
 `
 
+S.Location = styled.a`
+    width: 75%;
+    font-size: 18px;
+    word-spacing: 5px;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+    display: none;
+`
 
 export default S

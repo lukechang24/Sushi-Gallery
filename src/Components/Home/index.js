@@ -4,7 +4,7 @@ import S from "./style"
 class Home extends Component {
     unsubscribe = null
     state = {
-        count: 0,
+        count: 1,
     }
     componentDidMount() {
         this.cycleBackground()
