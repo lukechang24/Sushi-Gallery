@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import background from "./images/background2.jpg"
 const S = {}
 
 S.Container1 = styled.div`
@@ -11,9 +11,9 @@ S.Container1 = styled.div`
     @media only screen and (max-width: 1040px) {
         width: 100%;
     }
-    /* background-image: url(https://graphicriver.img.customer.envatousercontent.com/files/256060429/preview.jpg?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=3c24cdb3e687c0c91b03ceed7009aa91);
-    background-size: 100%; */
-    /* background-repeat: no-repeat; */
+    background-image: url(${background});
+    background-size: 200px;
+    background-repeat: repeat;
 `
 
 S.TabContainer = styled.div`
