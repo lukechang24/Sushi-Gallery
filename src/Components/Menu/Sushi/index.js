@@ -6,7 +6,7 @@ const Sushi = (props) => {
     const sushiList = sushi.map((sushi, i) => {
         return(
             <S.Item key={i}>
-                <S.Name>{sushi.name}</S.Name>
+                <S.Name>{sushi.name.toUpperCase()}</S.Name>
                 <S.Price>${sushi.price}</S.Price>
             </S.Item>
         )

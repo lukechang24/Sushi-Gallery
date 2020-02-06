@@ -24,6 +24,7 @@ S.RollContainer = styled.div`
 `
 
 S.Roll = styled.div`
+    font-family: 'Work Sans', sans-serif;
     position: relative;
     width: 275px;
     height: 200px;
@@ -40,6 +41,7 @@ S.Roll = styled.div`
 `
 S.RollImg = styled.img`
     height: 80%;
+    opacity: 0.8;
 `
 
 S.RollName = styled.h3`
@@ -65,7 +67,7 @@ S.InfoTitle = styled.h2`
 `
 
 S.Info = styled.p`
-    padding-left: 5px;
+    padding: 0 5px;
 `
 
 S.Price = styled.p`

@@ -13,7 +13,7 @@ S.Container1 = styled.div`
         width: 100%;
     }
     background-image: url(${background});
-    background-size: 350px;
+    background-size: 300px;
     background-repeat: repeat;
     z-index: 1;
 `
@@ -69,29 +69,17 @@ S.String = styled.div`
 `
 
 S.TabName = styled.h3`
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     padding-right: 13px;
     padding-left: 7px;
 `
 
-// S.Tab = styled.button`
-//     margin: 0 5px;
-//     padding: 5px;
-//     background-color: white;
-//     border: 1px solid black;
-//     border-radius: 10px;
-//     &.active {
-//         background-color: black;
-//         color: white;
-//     }
-// `
-
 S.TitleDiv = styled.div`
     width: 55%;
     background-color: antiquewhite;
     margin-top: 25px;
-    padding: 0 50px;
+    padding: 0 25px;
     @media only screen and (max-width: 1040px) {
         width: 65%;
         padding: 0 3%;        
@@ -105,7 +93,7 @@ S.Title = styled.h2`
     letter-spacing: 2.5px;
     text-align: center;
     padding: 10px 0 0;
-    margin: 5px 0 15px;
+    margin: 5px 0 5px;
     @media only screen and (max-width: 1040px) {
         padding: 0;
         margin: 5px 0 5px;
@@ -114,7 +102,9 @@ S.Title = styled.h2`
 `
 
 S.Message = styled.small`
+    font-family: 'Work Sans', sans-serif;
     font-style: italic;
+    font-weight: bold;
     margin: 5px;
 `
 

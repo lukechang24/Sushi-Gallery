@@ -8,7 +8,7 @@ S.Container1 = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 50px 50px;
+    padding: 0 25px 25px;
     margin-bottom: 50px;
     @media only screen and (max-width: 1040px) {
         width: 65%;
@@ -29,6 +29,7 @@ S.List = styled.ul`
 `
 
 S.Item = styled.li`
+    font-family: 'Quicksand', sans-serif;
     display: flex;
     justify-content: space-between;
     margin: 20px 0;

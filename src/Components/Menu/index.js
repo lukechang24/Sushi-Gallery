@@ -54,7 +54,7 @@ class Menu extends Component {
         }
         e.currentTarget.className = e.currentTarget.className += " active"
         this.setState({
-            currentTab: e.target.innerText
+            currentTab: e.target.getAttribute("name")
         })
     }
     handleArrow = (e) => {
@@ -81,7 +81,7 @@ class Menu extends Component {
                         <S.Tab>
                             <S.String left></S.String>
                             <S.String></S.String>
-                            <S.TabName>Fresh Rolls</S.TabName>
+                            <S.TabName name="Fresh Rolls">FRESH ROLLS</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign onClick={this.changeTab}>
@@ -89,7 +89,7 @@ class Menu extends Component {
                         <S.Tab>
                             <S.String left></S.String>
                             <S.String></S.String>
-                            <S.TabName>Cooked Rolls</S.TabName>
+                            <S.TabName name="Cooked Rolls">COOKED ROLLS</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign onClick={this.changeTab}>
@@ -97,7 +97,7 @@ class Menu extends Component {
                         <S.Tab>
                             <S.String left></S.String>
                             <S.String></S.String>
-                            <S.TabName>Sushi</S.TabName>
+                            <S.TabName name="Sushi">SUSHI</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign onClick={this.changeTab}>
@@ -105,7 +105,7 @@ class Menu extends Component {
                         <S.Tab>
                             <S.String left></S.String>
                             <S.String></S.String>
-                            <S.TabName>Sides</S.TabName>
+                            <S.TabName name="Sides">SIDES</S.TabName>
                         </S.Tab>
                     </S.Sign>
                 </S.TabContainer>
@@ -113,10 +113,10 @@ class Menu extends Component {
                     this.state.currentTab === "Sushi" || this.state.currentTab === "Sides"
                         ?
                             <S.TitleDiv>
-                                <S.Title>{this.state.currentTab}</S.Title>
+                                <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
                             </S.TitleDiv>
                         :
-                            <S.Title>{this.state.currentTab}</S.Title>
+                            <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
                 }
                 {
                     this.state.currentTab === "Fresh Rolls" || this.state.currentTab === "Cooked Rolls"

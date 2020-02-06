@@ -6,7 +6,7 @@ const Sides = (props) => {
     const sidesList = sides.map((side, i) => {
         return(
             <S.Item key={i}>
-                <S.Name>{side.name}</S.Name>
+                <S.Name>{side.name.toUpperCase()}</S.Name>
                 <S.Price>${side.price}</S.Price>
             </S.Item>
         )
