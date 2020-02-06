@@ -8,11 +8,11 @@ S.Container1 = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 50px 25px;
+    padding: 0 50px 50px;
     margin-bottom: 50px;
     @media only screen and (max-width: 1040px) {
         width: 65%;
-        padding: 0 3% 10px;
+        padding: 0 3% 15px;
     }
 `
 

@@ -68,6 +68,7 @@ class Menu extends Component {
     render() {
         return(
             <S.Container1>
+                <S.Overlay></S.Overlay>
                 <S.ArrowDiv left="5px">
                     <S.LeftArrow className="fas fa-chevron-left" id="-" onClick={this.handleArrow}></S.LeftArrow>
                 </S.ArrowDiv>
@@ -75,10 +76,38 @@ class Menu extends Component {
                     <S.RightArrow className="fas fa-chevron-right" id="+" onClick={this.handleArrow}></S.RightArrow>
                 </S.ArrowDiv>
                 <S.TabContainer>
-                    <S.Tab className="active" onClick={this.changeTab}>Fresh Rolls</S.Tab>
-                    <S.Tab onClick={this.changeTab}>Cooked Rolls</S.Tab>
-                    <S.Tab onClick={this.changeTab}>Sushi</S.Tab>
-                    <S.Tab onClick={this.changeTab}>Sides</S.Tab>
+                    <S.Sign className="active" onClick={this.changeTab}>
+                        <S.Triangle></S.Triangle>
+                        <S.Tab>
+                            <S.String left></S.String>
+                            <S.String></S.String>
+                            <S.TabName>Fresh Rolls</S.TabName>
+                        </S.Tab>
+                    </S.Sign>
+                    <S.Sign onClick={this.changeTab}>
+                        <S.Triangle></S.Triangle>
+                        <S.Tab>
+                            <S.String left></S.String>
+                            <S.String></S.String>
+                            <S.TabName>Cooked Rolls</S.TabName>
+                        </S.Tab>
+                    </S.Sign>
+                    <S.Sign onClick={this.changeTab}>
+                        <S.Triangle></S.Triangle>
+                        <S.Tab>
+                            <S.String left></S.String>
+                            <S.String></S.String>
+                            <S.TabName>Sushi</S.TabName>
+                        </S.Tab>
+                    </S.Sign>
+                    <S.Sign onClick={this.changeTab}>
+                        <S.Triangle></S.Triangle>
+                        <S.Tab>
+                            <S.String left></S.String>
+                            <S.String></S.String>
+                            <S.TabName>Sides</S.TabName>
+                        </S.Tab>
+                    </S.Sign>
                 </S.TabContainer>
                 {
                     this.state.currentTab === "Sushi" || this.state.currentTab === "Sides"
