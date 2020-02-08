@@ -8,7 +8,13 @@ const SmallNav = (props) => {
     }
     return(
         <S.Navbar>
-            <S.Title to="/">Sushi Gallery</S.Title>
+            <S.TitleDiv>
+                <S.Title to="/">Sushi Gallery</S.Title>
+                <S.Hours>
+                    Mon – Sat : 11:30 – 2:30pm & 5:00pm - 9:00pm<br/>
+                    Sun : Close
+                </S.Hours>
+            </S.TitleDiv>
             <S.LinkContainer>
                 <S.Link onClick={exitNav} to="/menu">MENU</S.Link>
                 <S.Link onClick={exitNav} to="/about">ABOUT</S.Link>

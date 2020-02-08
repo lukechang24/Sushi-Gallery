@@ -13,10 +13,14 @@ S.Navbar = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* @media only screen and (max-width: 1040px) {
-        display: none;
-    } */
 `
+
+S.TitleDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+`
+
 S.Title = styled(NavLink)`
     font-family: "Brownies";
     font-size: 40px;
@@ -76,6 +80,12 @@ S.Circle = styled.div`
     border-radius: 10px;
     margin: 0 10px;
     background-color: white;
+`
+
+S.Hours = styled.p`
+    font-size: 11px;
+    color: white;
+    text-align: center;
 `
 
 

@@ -18,7 +18,7 @@ S.RollContainer = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(275px, 275px));
     justify-content: center;
     grid-column-gap: 50px;
-    grid-row-gap: 25px;
+    grid-row-gap: 50px;
     margin: 0px 25px 25px;
     margin-bottom: 25px;
 `
@@ -32,7 +32,7 @@ S.Roll = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1.5px solid black;
+    border: 1px solid black;
     &.show :nth-child(3) {
         visibility: visible;
         flex-direction: column;

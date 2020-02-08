@@ -10,7 +10,7 @@ import S from "./style"
 
 class Menu extends Component {
     state = {
-        tabs: ["Fresh Rolls", "Cooked Rolls", "Sushi", "Sides"],
+        tabs: ["Fresh Rolls", "Cooked Rolls", "Nigiri Sushi", "Sides"],
         currentTab: "Fresh Rolls",
         data: {},
         loading: true
@@ -52,7 +52,7 @@ class Menu extends Component {
                 active[i].classList.remove("active")
             }
         }
-        e.currentTarget.className = e.currentTarget.className += " active"
+        e.target.parentNode.parentNode.classList.add("active")
         this.setState({
             currentTab: e.target.getAttribute("name")
         })
@@ -76,41 +76,41 @@ class Menu extends Component {
                     <S.RightArrow className="fas fa-chevron-right" id="+" onClick={this.handleArrow}></S.RightArrow>
                 </S.ArrowDiv>
                 <S.TabContainer>
-                    <S.Sign className="active" onClick={this.changeTab}>
+                    <S.Sign className="active">
                         <S.Triangle></S.Triangle>
                         <S.Tab>
                             <S.String left></S.String>
                             <S.String></S.String>
-                            <S.TabName name="Fresh Rolls">FRESH ROLLS</S.TabName>
+                            <S.TabName name="Fresh Rolls" onClick={this.changeTab}>FRESH ROLLS</S.TabName>
                         </S.Tab>
                     </S.Sign>
-                    <S.Sign onClick={this.changeTab}>
+                    <S.Sign>
                         <S.Triangle></S.Triangle>
                         <S.Tab>
                             <S.String left></S.String>
                             <S.String></S.String>
-                            <S.TabName name="Cooked Rolls">COOKED ROLLS</S.TabName>
+                            <S.TabName name="Cooked Rolls" onClick={this.changeTab}>COOKED ROLLS</S.TabName>
                         </S.Tab>
                     </S.Sign>
-                    <S.Sign onClick={this.changeTab}>
+                    <S.Sign>
                         <S.Triangle></S.Triangle>
                         <S.Tab>
                             <S.String left></S.String>
                             <S.String></S.String>
-                            <S.TabName name="Sushi">SUSHI</S.TabName>
+                            <S.TabName name="Nigiri Sushi" onClick={this.changeTab}>NIGIRI SUSHI</S.TabName>
                         </S.Tab>
                     </S.Sign>
-                    <S.Sign onClick={this.changeTab}>
+                    <S.Sign>
                         <S.Triangle></S.Triangle>
                         <S.Tab>
                             <S.String left></S.String>
                             <S.String></S.String>
-                            <S.TabName name="Sides">SIDES</S.TabName>
+                            <S.TabName name="Sides" onClick={this.changeTab}>SIDES</S.TabName>
                         </S.Tab>
                     </S.Sign>
                 </S.TabContainer>
                 {
-                    this.state.currentTab === "Sushi" || this.state.currentTab === "Sides"
+                    this.state.currentTab === "Nigiri Sushi" || this.state.currentTab === "Sides"
                         ?
                             <S.TitleDiv>
                                 <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
@@ -138,7 +138,7 @@ class Menu extends Component {
                         ?
                             <CookedRolls cookedRolls={this.state.data.cookedRolls}/>
                         :
-                    this.state.currentTab === "Sushi"
+                    this.state.currentTab === "Nigiri Sushi"
                         ?
                             <Sushi data={this.state.data} sushi={this.state.data.sushi}/>
                         :

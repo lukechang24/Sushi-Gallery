@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import background from "./images/background2.jpg"
+import background from "./images/background5.jpg"
 const S = {}
 
 S.Container1 = styled.div`
@@ -9,13 +9,17 @@ S.Container1 = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media only screen and (max-width: 1040px) {
-        width: 100%;
-    }
-    background-image: url(${background});
-    background-size: 300px;
+    background: cyan url(${background});
+    background-size: 400px;
     background-repeat: repeat;
     z-index: 1;
+    @media only screen and (max-width: 1040px) {
+        width: 100%;
+        background-size: 350px;
+    }
+    @media only screen and (max-width: 375px) {
+        background-size: 300px;
+    }
 `
 
 S.TabContainer = styled.div`
@@ -27,9 +31,10 @@ S.TabContainer = styled.div`
 `
 
 S.Sign = styled.div`
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
     display: flex;
+    letter-spacing: 1.5px;
     margin: 10px;
     transition: all 0.25s ease-in-out;
     &.active {
@@ -88,9 +93,8 @@ S.TitleDiv = styled.div`
 `
 
 S.Title = styled.h2`
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Delius Unicase', cursive;
     font-size: 40px;
-    letter-spacing: 2.5px;
     text-align: center;
     padding: 10px 0 0;
     margin: 5px 0 5px;
@@ -105,7 +109,7 @@ S.Message = styled.small`
     font-family: 'Work Sans', sans-serif;
     font-style: italic;
     font-weight: bold;
-    margin: 5px;
+    margin-bottom: 10px;
 `
 
 S.ArrowDiv = styled.div`
@@ -150,7 +154,7 @@ S.Overlay = styled.div`
     width: 100%;
     height: 100%;
     background-color: white;
-    opacity: 0.5;
+    opacity: 0.65;
     z-index: -2;
 `
 
