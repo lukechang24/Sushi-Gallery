@@ -25,6 +25,8 @@ S.Container2 = styled.div`
 
 S.List = styled.ul`
     width: 80%;
+    display: flex;
+    flex-direction: column;
     list-style: none;
 `
 
@@ -48,6 +50,13 @@ S.Name = styled.p`
 
 S.Price = styled.p`
     margin-left: 10px;
+`
+
+S.Message = styled.span`
+    width: 100%;
+    font-style: italic;
+    text-align: center;
+    margin-top: 25px;
 `
 
 

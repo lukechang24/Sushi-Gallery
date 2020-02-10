@@ -24,15 +24,14 @@ S.RollContainer = styled.div`
 `
 
 S.Roll = styled.div`
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Caveat', cursive;
     position: relative;
     width: 275px;
     height: 200px;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid black;
+    background-color: lightgray;
     &.show :nth-child(3) {
         visibility: visible;
         flex-direction: column;
@@ -41,7 +40,7 @@ S.Roll = styled.div`
 `
 S.RollImg = styled.img`
     height: 80%;
-    opacity: 0.8;
+    opacity: 0.75;
 `
 
 S.RollName = styled.h3`
@@ -49,9 +48,12 @@ S.RollName = styled.h3`
     display:flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
+    color: white;
 `
 
 S.InfoContainer = styled.div`
+    font-family: 'Work Sans', sans-serif;
     visibility: hidden;
     width: 100%;
     height: 80%;

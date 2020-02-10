@@ -82,8 +82,8 @@ S.TabName = styled.h3`
 
 S.TitleDiv = styled.div`
     width: 55%;
-    background-color: antiquewhite;
-    margin-top: 25px;
+    background-color: ${props => props.color ? props.color : "antiquewhite"};
+    margin-top: 50px;
     padding: 0 25px;
     @media only screen and (max-width: 1040px) {
         width: 65%;
@@ -93,7 +93,7 @@ S.TitleDiv = styled.div`
 `
 
 S.Title = styled.h2`
-    font-family: 'Delius Unicase', cursive;
+    font-family: 'Work Sans', sans-serif;
     font-size: 40px;
     text-align: center;
     padding: 10px 0 0;
@@ -109,7 +109,7 @@ S.Message = styled.small`
     font-family: 'Work Sans', sans-serif;
     font-style: italic;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 10px 0;
 `
 
 S.ArrowDiv = styled.div`
