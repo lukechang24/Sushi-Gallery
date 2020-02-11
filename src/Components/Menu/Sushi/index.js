@@ -16,7 +16,7 @@ const Sushi = (props) => {
         <S.Container1>
             <S.Container2>
                 <S.List>
-                    <S.Message>*2pcs w/ each order*</S.Message>
+                    <S.Message>*2 pieces with each order*</S.Message>
                     {sushiList}
                 </S.List>
             </S.Container2>

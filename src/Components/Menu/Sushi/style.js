@@ -4,10 +4,12 @@ const S = {}
 
 S.Container1 = styled.div`
     width: 55%;
-    background-color: antiquewhite;
+    background-color: #fff2de;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     padding: 0 25px 25px;
     margin-bottom: 50px;
     @media only screen and (max-width: 1040px) {
@@ -21,10 +23,8 @@ S.Container2 = styled.div`
     display: flex;
     justify-content: center;
     background-color: white;
-    border: 1.5px solid black;
     @media only screen and (max-width: 1040px) {
         width: 100%;
-        border: 1px solid black;
     }
 `
 

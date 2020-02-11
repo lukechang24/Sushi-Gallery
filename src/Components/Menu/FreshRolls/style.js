@@ -33,7 +33,7 @@ S.Roll = styled.div`
     flex-direction: column;
     justify-content: space-between;
     background-color: lightgray;
-    border: 3px solid black;
+    border: 3px solid #0C1821;
     border-bottom: none;
     &.show :nth-child(3) {
         visibility: visible;
@@ -51,8 +51,8 @@ S.RollName = styled.h3`
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    color: white;
+    background-color: #0C1821;
+    color: rgba(255,255,255);
 `
 
 S.InfoContainer = styled.div`

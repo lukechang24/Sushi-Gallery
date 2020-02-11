@@ -51,7 +51,7 @@ S.Tab = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #0C1821;
     border-radius: 0 5px 5px 0;
 `
 
@@ -59,7 +59,7 @@ S.Triangle = styled.div`
     height: 0;
     width: 0;
     border-top: 17.5px solid transparent;
-    border-right: 25px solid black;
+    border-right: 25px solid #0C1821;
     border-bottom: 17.5px solid transparent;
 `
 
@@ -79,14 +79,17 @@ S.TabName = styled.h3`
     justify-content: center;
     align-items: center;
     font-size: 15px;
-    color: white;
+    color: #F0EFEF;
     padding-right: 13px;
     padding-left: 7px;
 `
 
 S.TitleDiv = styled.div`
     width: 55%;
-    background-color: ${props => props.color ? props.color : "antiquewhite"};
+    background-color: ${props => props.color ? props.color : "#fff2de"};
+    color: #0C1821;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     margin-top: 50px;
     padding: 0 25px;
     @media only screen and (max-width: 1040px) {
@@ -97,7 +100,7 @@ S.TitleDiv = styled.div`
 `
 
 S.Title = styled.h2`
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mansalva', cursive;
     font-size: 40px;
     text-align: center;
     padding: 10px 0 0;
@@ -112,7 +115,7 @@ S.Title = styled.h2`
 S.Message = styled.small`
     font-family: 'Work Sans', sans-serif;
     font-style: italic;
-    font-weight: bold;
+    color: gray;
     margin: 10px 0;
 `
 

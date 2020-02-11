@@ -8,7 +8,7 @@ S.Navbar = styled.div`
     left: 0;
     width: 25%;
     height: 100vh;
-    background-color: black;
+    background-color: #0C1821;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -85,7 +85,7 @@ S.Circle = styled.div`
 
 S.Hours = styled.p`
     font-size: 13px;
-    color: white;
+    color: #C8C8C8;
     text-align: center;
 `
 

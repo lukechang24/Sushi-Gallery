@@ -112,7 +112,7 @@ class Menu extends Component {
                 {
                     this.state.currentTab === "Nigiri Sushi" || this.state.currentTab === "Sides"
                         ?
-                            <S.TitleDiv color={this.state.loading ? "transparent" : "antiquewhite"}>
+                            <S.TitleDiv color={this.state.loading ? "transparent" : null}>
                                 <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
                             </S.TitleDiv>
                         :
