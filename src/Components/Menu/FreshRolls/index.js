@@ -11,7 +11,7 @@ const FreshRolls = (props) => {
                 <S.RollName>{roll.name.toUpperCase()}</S.RollName>
                 <S.InfoContainer>
                 <S.Price>${roll.price}</S.Price>
-                    <S.InfoTitle>Ingredients</S.InfoTitle>
+                    <S.InfoTitle>Main Ingredients</S.InfoTitle>
                     {
                         roll.base
                             ?

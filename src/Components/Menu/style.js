@@ -35,7 +35,7 @@ S.Sign = styled.div`
     position: relative;
     display: flex;
     letter-spacing: 1.5px;
-    margin: 10px;
+    margin: 10px 5px;
     transition: all 0.25s ease-in-out;
     &.active {
         transform: translate(0, 7.5px);
@@ -74,6 +74,10 @@ S.String = styled.div`
 `
 
 S.TabName = styled.h3`
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 15px;
     color: white;
     padding-right: 13px;
@@ -93,14 +97,14 @@ S.TitleDiv = styled.div`
 `
 
 S.Title = styled.h2`
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     text-align: center;
     padding: 10px 0 0;
     margin: 5px 0 5px;
     @media only screen and (max-width: 1040px) {
         padding: 0;
-        margin: 5px 0 5px;
+        margin: 15px 0 5px;
         font-size: 20px;
     }
 `
@@ -154,7 +158,7 @@ S.Overlay = styled.div`
     width: 100%;
     height: 100%;
     background-color: white;
-    opacity: 0.65;
+    opacity: 0.75;
     z-index: -2;
 `
 

@@ -24,7 +24,8 @@ S.RollContainer = styled.div`
 `
 
 S.Roll = styled.div`
-    font-family: 'Caveat', cursive;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
     position: relative;
     width: 275px;
     height: 200px;
@@ -32,6 +33,8 @@ S.Roll = styled.div`
     flex-direction: column;
     justify-content: space-between;
     background-color: lightgray;
+    border: 3px solid black;
+    border-bottom: none;
     &.show :nth-child(3) {
         visibility: visible;
         flex-direction: column;

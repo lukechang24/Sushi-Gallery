@@ -17,10 +17,15 @@ S.Container1 = styled.div`
 `
 
 S.Container2 = styled.div`
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     background-color: white;
+    border: 1.5px solid black;
+    @media only screen and (max-width: 1040px) {
+        width: 100%;
+        border: 1px solid black;
+    }
 `
 
 S.List = styled.ul`
@@ -28,6 +33,9 @@ S.List = styled.ul`
     display: flex;
     flex-direction: column;
     list-style: none;
+    @media only screen and (max-width: 1040px) {
+        width: 90%;
+    }
 `
 
 S.Item = styled.li`
