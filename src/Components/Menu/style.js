@@ -9,7 +9,7 @@ S.Container1 = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: cyan url(${background});
+    background: white url(${background});
     background-size: 400px;
     background-repeat: repeat;
     z-index: 1;
@@ -87,7 +87,7 @@ S.TabName = styled.h3`
 S.TitleDiv = styled.div`
     width: 55%;
     background-color: ${props => props.color ? props.color : "#fff2de"};
-    color: #0C1821;
+    color: #444444;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-top: 50px;
@@ -115,7 +115,7 @@ S.Title = styled.h2`
 S.Message = styled.small`
     font-family: 'Work Sans', sans-serif;
     font-style: italic;
-    color: gray;
+    color: #565656;
     margin: 10px 0;
 `
 

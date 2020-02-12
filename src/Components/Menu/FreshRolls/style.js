@@ -72,16 +72,18 @@ S.InfoTitle = styled.h2`
 `
 
 S.Info = styled.p`
+    color: #0C1821;
     padding: 0 5px;
 `
 
 S.Price = styled.p`
     position: absolute;
     right: 5px;
-    font-size: 20px;
+    font-size: 21px;
 `
 
 S.Bold = styled.span`
+    color: black;
     font-weight: bolder;
 `
 

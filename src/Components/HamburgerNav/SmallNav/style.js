@@ -6,13 +6,19 @@ const S = {}
 S.Navbar = styled.div`
     position: fixed;
     top: 0;
-    margin-left: 25px;
     width: 250px;
     height: 100vh;
-    background-color: black;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: black;
+    margin-left: 25px;
+    @media only screen and (max-width: 1040px) {
+        width: 400px;
+    }
+    @media only screen and (max-width: 650px) {
+        width: 350px;
+    }
 `
 
 S.TitleDiv = styled.div`
@@ -83,7 +89,8 @@ S.Circle = styled.div`
 `
 
 S.Hours = styled.p`
-    font-size: 11px;
+    font-size: 15px;
+    padding: 0 10px;
     color: white;
     text-align: center;
 `

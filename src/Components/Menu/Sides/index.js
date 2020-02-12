@@ -7,7 +7,7 @@ const Sides = (props) => {
         const newName = side.name.split("").map((letter, i, arr) => arr.indexOf("(") < i && arr.indexOf("(") >= 0 ? letter : letter.toUpperCase()).join("")
         return(
             <S.Item key={i}>
-                <S.Name>{newName}</S.Name>
+                <S.Name>{side.name}</S.Name>
                 <S.Price>${side.price}</S.Price>
             </S.Item>
         )

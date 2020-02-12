@@ -42,8 +42,9 @@ S.Item = styled.li`
     font-family: 'Quicksand', sans-serif;
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    color: #444444;
     font-size: 20px;
+    margin: 20px 0;
     @media only screen and (max-width: 1040px) {
         font-size: 15px;
         margin: 15px 0;
@@ -62,6 +63,7 @@ S.Price = styled.p`
 
 S.Message = styled.span`
     width: 100%;
+    color: #565656;
     font-style: italic;
     text-align: center;
     margin-top: 25px;
