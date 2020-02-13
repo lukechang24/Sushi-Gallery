@@ -4,7 +4,7 @@ const S = {}
 
 S.Container1 = styled.div`
     width: 55%;
-    background-color: #fff2de;
+    background: linear-gradient(to right, hsl(36, 100%, 94%), hsl(50, 100%, 94%));
     display: flex;
     flex-direction: column;
     align-items: center;

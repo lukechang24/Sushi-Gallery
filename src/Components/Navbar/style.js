@@ -9,6 +9,7 @@ S.Navbar = styled.div`
     width: 25%;
     height: 100vh;
     background-color: #0C1821;
+    background-image: linear-gradient(to bottom right, hsl(206, 47%, 5%), hsl(206, 47%, 10%), hsl(206, 47%, 20%));
     display: flex;
     align-items: center;
     flex-direction: column;

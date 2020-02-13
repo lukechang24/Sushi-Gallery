@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import background from "./images/background5.jpg"
+import chain from "./images/chain.png"
+
 const S = {}
 
 S.Container1 = styled.div`
@@ -52,25 +54,19 @@ S.Tab = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #0C1821;
-    border-radius: 0 5px 5px 0;
+    background-image: linear-gradient(to bottom right, hsl(206, 47%, 10%), hsl(206, 47%, 20%));
+    border-radius: 5px;
 `
 
-S.Triangle = styled.div`
-    height: 0;
-    width: 0;
-    border-top: 17.5px solid transparent;
-    border-right: 25px solid #0C1821;
-    border-bottom: 17.5px solid transparent;
-`
-
-S.String = styled.div`
+S.Chain = styled.div`
     position: absolute;
     left: ${props => props.left ? "15%" : "unset"};
     right: ${props => props.left ? "unset" : "15%"};
     bottom: 35px;
-    width: 3px;
+    width: 5px;
     height: 50px;
-    background-color: grey;
+    background-image: url(${chain});
+    background-size: 100%;
 `
 
 S.TabName = styled.h3`
@@ -78,15 +74,14 @@ S.TabName = styled.h3`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 12px;
     color: #F0EFEF;
-    padding-right: 13px;
-    padding-left: 7px;
+    padding: 0 7.5px;
 `
 
 S.TitleDiv = styled.div`
     width: 55%;
-    background-color: ${props => props.color ? props.color : "#fff2de"};
+    background-image: ${props => props.color ? "linear-gradient(to right, hsl(36, 100%, 94%), hsl(50, 100%, 94%))" : null};
     color: #444444;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -96,6 +91,9 @@ S.TitleDiv = styled.div`
         width: 65%;
         padding: 0 3%;        
         margin-top: 25px;
+    }
+    &.hide {
+        background-image: none;
     }
 `
 

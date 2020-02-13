@@ -77,34 +77,30 @@ class Menu extends Component {
                 </S.ArrowDiv>
                 <S.TabContainer>
                     <S.Sign className="active">
-                        <S.Triangle></S.Triangle>
                         <S.Tab>
-                            <S.String left></S.String>
-                            <S.String></S.String>
+                            <S.Chain left></S.Chain>
+                            <S.Chain></S.Chain>
                             <S.TabName name="Fresh Rolls" onClick={this.changeTab}>FRESH ROLLS</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
-                        <S.Triangle></S.Triangle>
                         <S.Tab>
-                            <S.String left></S.String>
-                            <S.String></S.String>
+                            <S.Chain left></S.Chain>
+                            <S.Chain></S.Chain>
                             <S.TabName name="Cooked Rolls" onClick={this.changeTab}>COOKED ROLLS</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
-                        <S.Triangle></S.Triangle>
                         <S.Tab>
-                            <S.String left></S.String>
-                            <S.String></S.String>
+                            <S.Chain left></S.Chain>
+                            <S.Chain></S.Chain>
                             <S.TabName name="Nigiri Sushi" onClick={this.changeTab}>NIGIRI SUSHI</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
-                        <S.Triangle></S.Triangle>
                         <S.Tab>
-                            <S.String left></S.String>
-                            <S.String></S.String>
+                            <S.Chain left></S.Chain>
+                            <S.Chain></S.Chain>
                             <S.TabName name="Sides" onClick={this.changeTab}>SIDES</S.TabName>
                         </S.Tab>
                     </S.Sign>
@@ -112,11 +108,11 @@ class Menu extends Component {
                 {
                     this.state.currentTab === "Nigiri Sushi" || this.state.currentTab === "Sides"
                         ?
-                            <S.TitleDiv color={this.state.loading ? "transparent" : null}>
+                            <S.TitleDiv className={this.state.loading ? "hide" : ""} color="true">
                                 <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
                             </S.TitleDiv>
                         :
-                            <S.TitleDiv color="transparent">
+                            <S.TitleDiv>
                                 <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
                             </S.TitleDiv>
                 }

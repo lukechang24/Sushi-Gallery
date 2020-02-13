@@ -51,7 +51,7 @@ S.RollName = styled.h3`
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: #0C1821;
+    background: black linear-gradient(to right, hsl(206, 47%, 10%), hsl(206, 47%, 25%), hsl(206, 47%, 10%));
     color: rgba(255,255,255);
 `
 
@@ -67,8 +67,9 @@ S.InfoContainer = styled.div`
 `
 
 S.InfoTitle = styled.h2`
+    color: black;
     padding-left: 5px;
-    margin-bottom: 2px;
+    margin: 5px 0;
 `
 
 S.Info = styled.p`
@@ -79,11 +80,12 @@ S.Info = styled.p`
 S.Price = styled.p`
     position: absolute;
     right: 5px;
+    top: 6px;
     font-size: 21px;
 `
 
 S.Bold = styled.span`
-    color: black;
+    color: hsl(0, 100%, 30%);
     font-weight: bolder;
 `
 
