@@ -67,9 +67,10 @@ S.InfoContainer = styled.div`
 `
 
 S.InfoTitle = styled.h2`
+    font-family: 'Prompt', sans-serif;
     color: black;
     padding-left: 5px;
-    margin: 5px 0;
+    margin: 0 0 5px;
 `
 
 S.Info = styled.p`
@@ -80,8 +81,8 @@ S.Info = styled.p`
 S.Price = styled.p`
     position: absolute;
     right: 5px;
-    top: 6px;
-    font-size: 21px;
+    top: 7px;
+    font-size: 20px;
 `
 
 S.Bold = styled.span`

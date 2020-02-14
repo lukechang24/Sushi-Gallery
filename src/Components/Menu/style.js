@@ -25,8 +25,12 @@ S.Container1 = styled.div`
 `
 
 S.TabContainer = styled.div`
+    position: fixed;
+    top: 0;
     display: flex;
     margin-top: 5px;
+    z-index: 5;
+    transition: all 0.25s ease-in;
     @media only screen and (max-width: 1040px) {
         display: none;
     }
@@ -81,11 +85,11 @@ S.TabName = styled.h3`
 
 S.TitleDiv = styled.div`
     width: 55%;
-    background-image: ${props => props.color ? "linear-gradient(to right, hsl(36, 100%, 94%), hsl(50, 100%, 94%))" : null};
+    background-image: ${props => props.color === "true" ? "linear-gradient(to right, hsl(36, 100%, 94%), hsl(50, 100%, 94%))" : null};
     color: #444444;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    margin-top: 50px;
+    margin-top: 75px;
     padding: 0 25px;
     @media only screen and (max-width: 1040px) {
         width: 65%;
@@ -159,7 +163,7 @@ S.Overlay = styled.div`
     width: 100%;
     height: 100%;
     background-color: white;
-    opacity: 0.75;
+    opacity: 0.7;
     z-index: -2;
 `
 

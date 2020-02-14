@@ -5,15 +5,17 @@ import FreshRolls from "./FreshRolls"
 import CookedRolls from "./CookedRolls"
 import Sushi from "./Sushi"
 import Sides from "./Sides"
+import Beverages from "./Beverages"
 
 import S from "./style"
 
 class Menu extends Component {
     state = {
-        tabs: ["Fresh Rolls", "Cooked Rolls", "Nigiri Sushi", "Sides"],
+        tabs: ["Fresh Rolls", "Cooked Rolls", "Nigiri Sushi", "Sides", "Beverages"],
         currentTab: "Fresh Rolls",
         data: {},
-        loading: true
+        loading: true,
+        lastPos: 0
     }
     componentDidMount() {
         Tabletop.init(
@@ -29,7 +31,7 @@ class Menu extends Component {
                 },
             }
         )
-        this.addHover()
+        window.addEventListener("scroll", this.throttle(this.removeTabs, 50))
     }
     componentDidUpdate() {
         this.addHover()
@@ -56,6 +58,27 @@ class Menu extends Component {
         this.setState({
             currentTab: e.target.getAttribute("name")
         })
+        window.scrollTo(0, 0)
+    }
+    removeTabs = () => {
+        const tabs = document.querySelector(".tabs")
+        if(window.scrollY > this.state.lastPos) {
+            tabs.style.top = "-70px"
+        } else {
+            tabs.style.top = "0"
+        }
+        this.setState({
+            lastPos: window.scrollY
+        })
+    }
+    throttle = (fn, wait) => {
+        let time = Date.now()
+        return function() {
+            if((time + wait - Date.now()) < 0) {
+                fn()
+                time = Date.now()
+            }
+        }     
     }
     handleArrow = (e) => {
         const curIndex = this.state.tabs.indexOf(this.state.currentTab)
@@ -75,7 +98,7 @@ class Menu extends Component {
                 <S.ArrowDiv right="5px">
                     <S.RightArrow className="fas fa-chevron-right" id="+" onClick={this.handleArrow}></S.RightArrow>
                 </S.ArrowDiv>
-                <S.TabContainer>
+                <S.TabContainer className="tabs">
                     <S.Sign className="active">
                         <S.Tab>
                             <S.Chain left></S.Chain>
@@ -104,18 +127,17 @@ class Menu extends Component {
                             <S.TabName name="Sides" onClick={this.changeTab}>SIDES</S.TabName>
                         </S.Tab>
                     </S.Sign>
+                    <S.Sign>
+                        <S.Tab>
+                            <S.Chain left></S.Chain>
+                            <S.Chain></S.Chain>
+                            <S.TabName name="Beverages" onClick={this.changeTab}>BEVERAGES</S.TabName>
+                        </S.Tab>
+                    </S.Sign>
                 </S.TabContainer>
-                {
-                    this.state.currentTab === "Nigiri Sushi" || this.state.currentTab === "Sides"
-                        ?
-                            <S.TitleDiv className={this.state.loading ? "hide" : ""} color="true">
-                                <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
-                            </S.TitleDiv>
-                        :
-                            <S.TitleDiv>
-                                <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
-                            </S.TitleDiv>
-                }
+                <S.TitleDiv className={this.state.loading ? "hide" : ""} color={this.state.currentTab === "Fresh Rolls" || this.state.currentTab === "Cooked Rolls" ? "false" : "true"}>
+                    <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
+                </S.TitleDiv>
                 {
                     this.state.currentTab === "Fresh Rolls" || this.state.currentTab === "Cooked Rolls"
                         ?
@@ -140,7 +162,15 @@ class Menu extends Component {
                         ?
                             <Sushi data={this.state.data} sushi={this.state.data.sushi}/>
                         :
+                    this.state.currentTab === "Sides"
+                        ?
                             <Sides sides={this.state.data.sides}/>
+                        :
+                    this.state.currentTab === "Beverages"
+                        ?
+                            <Beverages beverages={this.state.data.beverages}/>
+                        :
+                            null
                 }
             </S.Container1>
         )

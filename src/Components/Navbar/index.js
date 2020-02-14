@@ -8,7 +8,7 @@ const Navbar = () => {
                 <S.Title to="/">Sushi Gallery</S.Title>
                 <S.Hours>
                     Mon – Sat : 11:30 – 2:30pm & 5:00pm - 9:00pm<br/>
-                    Sun : Close
+                    Sun : Closed
                 </S.Hours>
             </S.TitleDiv>
             <S.LinkContainer>

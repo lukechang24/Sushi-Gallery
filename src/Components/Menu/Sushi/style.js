@@ -20,6 +20,7 @@ S.Container1 = styled.div`
 
 S.Container2 = styled.div`
     width: 90%;
+    min-height: 75vh;
     display: flex;
     justify-content: center;
     background-color: white;
@@ -39,7 +40,7 @@ S.List = styled.ul`
 `
 
 S.Item = styled.li`
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     display: flex;
     justify-content: space-between;
     color: #444444;
@@ -58,7 +59,12 @@ S.Name = styled.p`
 `
 
 S.Price = styled.p`
-    margin-left: 10px;
+    margin: ${props => props.margin ? props.margin : 0};
+`
+
+S.PriceDiv = styled.div`
+    display: flex;
+    flex-direction: column;
 `
 
 S.Message = styled.span`
