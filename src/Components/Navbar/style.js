@@ -6,13 +6,16 @@ S.Navbar = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: 25%;
+    width: 400px;
     height: 100vh;
     background-color: #0C1821;
-    background-image: linear-gradient(to bottom right, hsl(206, 47%, 5%), hsl(206, 47%, 10%), hsl(206, 47%, 20%));
+    /* background-image: linear-gradient(to bottom right, hsl(206, 47%, 5%), hsl(206, 47%, 10%), hsl(206, 47%, 20%)); */
     display: flex;
     align-items: center;
     flex-direction: column;
+    @media only screen and (max-width: 1300px) {
+        width: 350px;
+    }
     @media only screen and (max-width: 1040px) {
         display: none;
     }

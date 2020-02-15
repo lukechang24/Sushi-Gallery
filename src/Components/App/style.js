@@ -7,7 +7,10 @@ S.AppContainer = styled.div`
     display: flex;
 `
 S.EmptySpace = styled.div`
-    width: 25%;
+    width: 400px;
+    @media only screen and (max-width: 1300px) {
+        width: 350px;
+    }
     @media only screen and (max-width: 1040px) {
         display: none;
     }

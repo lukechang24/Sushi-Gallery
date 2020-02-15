@@ -6,7 +6,7 @@ const S = {}
 
 S.Container1 = styled.div`
     position: relative;
-    width: 75%;
+    width: calc(100vw - 400px);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,6 +15,9 @@ S.Container1 = styled.div`
     background-size: 400px;
     background-repeat: repeat;
     z-index: 1;
+    @media only screen and (max-width: 1300px) {
+        width: calc(100vw - 350px);
+    }
     @media only screen and (max-width: 1040px) {
         width: 100%;
         background-size: 350px;
@@ -84,7 +87,7 @@ S.TabName = styled.h3`
 `
 
 S.TitleDiv = styled.div`
-    width: 55%;
+    width: 600px;
     background-image: ${props => props.color === "true" ? "linear-gradient(to right, hsl(36, 100%, 94%), hsl(50, 100%, 94%))" : null};
     color: #444444;
     border-top-left-radius: 5px;
@@ -110,7 +113,10 @@ S.Title = styled.h2`
     @media only screen and (max-width: 1040px) {
         padding: 0;
         margin: 15px 0 5px;
-        font-size: 20px;
+        font-size: 35px;
+    }
+    @media only screen and (max-width: 650px) {
+        font-size: 30px;
     }
 `
 

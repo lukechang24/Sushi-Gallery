@@ -3,7 +3,7 @@ import styled from "styled-components"
 const S = {}
 
 S.Container1 = styled.div`
-    width: 55%;
+    width: 600px;
     background: linear-gradient(to right, hsl(36, 100%, 94%), hsl(50, 100%, 94%));
     display: flex;
     flex-direction: column;
@@ -47,8 +47,10 @@ S.Item = styled.li`
     font-size: 20px;
     margin: 20px 0;
     @media only screen and (max-width: 1040px) {
-        font-size: 15px;
         margin: 15px 0;
+    }
+    @media only screen and (max-width: 650px) {
+        font-size: 15px;
     }
 `
 

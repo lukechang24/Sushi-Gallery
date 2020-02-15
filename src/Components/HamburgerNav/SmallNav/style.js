@@ -11,13 +11,17 @@ S.Navbar = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: black;
+    background-color: #0C1821;
     margin-left: 25px;
     @media only screen and (max-width: 1040px) {
         width: 400px;
     }
     @media only screen and (max-width: 650px) {
         width: 350px;
+    }
+    @media only screen and (max-width: 375px) {
+        width: 300px;
+        margin-left: 15px;
     }
 `
 
