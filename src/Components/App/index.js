@@ -23,7 +23,6 @@ class App extends Component {
     showNav: false
   }
   handleNav = (e) => {
-    console.log(e.currentTarget)
     if(this.state.showNav) {
       e.currentTarget.classList.remove("active")
     } else {
@@ -51,7 +50,7 @@ class App extends Component {
           <Route path="/contact" render={() => <Contact />}></Route>
           <Route component={My404}></Route>
         </Switch>
-        <S.Footer></S.Footer>
+        {/* <S.Footer></S.Footer> */}
       </S.AppContainer>
     )
   }

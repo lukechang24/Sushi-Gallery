@@ -88,16 +88,19 @@ S.TabName = styled.h3`
 
 S.TitleDiv = styled.div`
     width: 600px;
-    background-image: ${props => props.color === "true" ? "linear-gradient(to right, hsl(36, 100%, 94%), hsl(50, 100%, 94%))" : null};
+    background-image: ${props => props.color === "true" ? "linear-gradient(to right, hsl(36, 100%, 90%), hsl(45, 100%, 85%))" : null};
     color: #444444;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-top: 75px;
     padding: 0 25px;
     @media only screen and (max-width: 1040px) {
-        width: 65%;
+        width: 60%;
         padding: 0 3%;        
-        margin-top: 25px;
+        margin-top: 50px;
+    }
+    @media only screen and (max-width: 650px) {
+        width: 80%;
     }
     &.hide {
         background-image: none;
@@ -116,7 +119,7 @@ S.Title = styled.h2`
         font-size: 35px;
     }
     @media only screen and (max-width: 650px) {
-        font-size: 30px;
+        font-size: 25px;
     }
 `
 
@@ -125,6 +128,29 @@ S.Message = styled.small`
     font-style: italic;
     color: #565656;
     margin: 10px 0;
+`
+
+S.DotDiv = styled.div`
+    display: none;
+    position: absolute;
+    top: 25px;
+    justify-content: center;
+    @media only screen and (max-width: 1040px) {
+        display: flex;
+    }
+`
+
+S.Dot = styled.div`
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: white;
+    margin: 0 3px;
+    cursor: pointer;
+    &.black {
+        background-color: black;
+    }
 `
 
 S.ArrowDiv = styled.div`
@@ -146,12 +172,12 @@ S.ArrowName = styled.p`
 
 S.LeftArrow = styled.i`
     font-size: 40px;
-    color: black;
+    color: #444444;
 `
 
 S.RightArrow = styled.i`
     font-size: 40px;
-    color: black;
+    color: #444444;
 `
 
 S.Spinner = styled.i`

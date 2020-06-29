@@ -1,12 +1,13 @@
 import React from "react"
 import S from "../FreshRolls/style"
+import NA from "../images/NA1.png"
 
 const CookedRolls = (props) => {
     const cookedRolls = props.cookedRolls ? props.cookedRolls.elements : []
     const rollList = cookedRolls.map((roll, i) => {
         return(
             <S.Roll key={i} className="roll">
-                <S.RollImg src={roll.url}></S.RollImg>
+                <S.RollImg src={NA}></S.RollImg>
                 <S.RollName>{roll.name.toUpperCase()}</S.RollName>
                 <S.InfoContainer>
                 <S.Price>${roll.price}</S.Price>

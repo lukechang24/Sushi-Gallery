@@ -4,8 +4,11 @@ const S = {}
 
 S.Container1 = styled.div`
     position: relative;
-    width: 75%;
+    width: calc(100vw - 400px);
     height: 100vh;
+    @media only screen and (max-width: 1300px) {
+        width: calc(100vw - 350px);
+    }
     @media only screen and (max-width: 1040px) {
         width: 100%;
     }

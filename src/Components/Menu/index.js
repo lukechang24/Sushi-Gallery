@@ -92,6 +92,13 @@ class Menu extends Component {
         return(
             <S.Container1>
                 <S.Overlay></S.Overlay>
+                <S.DotDiv>
+                    <S.Dot name="Fresh Rolls" className={this.state.currentTab === "Fresh Rolls" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Cooked Rolls" className={this.state.currentTab === "Cooked Rolls" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Nigiri Sushi" className={this.state.currentTab === "Nigiri Sushi" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Sides" className={this.state.currentTab === "Sides" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Beverages" className={this.state.currentTab === "Beverages" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                </S.DotDiv>
                 <S.ArrowDiv left="5px">
                     <S.LeftArrow className="fas fa-chevron-left" id="-" onClick={this.handleArrow}></S.LeftArrow>
                 </S.ArrowDiv>

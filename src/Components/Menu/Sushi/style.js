@@ -4,7 +4,7 @@ const S = {}
 
 S.Container1 = styled.div`
     width: 600px;
-    background: linear-gradient(to right, hsl(36, 100%, 94%), hsl(50, 100%, 94%));
+    background: linear-gradient(to right, hsl(36, 100%, 90%), hsl(45, 100%, 85%));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,14 +13,17 @@ S.Container1 = styled.div`
     padding: 0 25px 25px;
     margin-bottom: 50px;
     @media only screen and (max-width: 1040px) {
-        width: 65%;
+        width: 60%;
         padding: 0 3% 15px;
+    }
+    @media only screen and (max-width: 650px) {
+        width: 80%;
     }
 `
 
 S.Container2 = styled.div`
     width: 90%;
-    min-height: 75vh;
+    min-height: 85vh;
     display: flex;
     justify-content: center;
     background-color: white;
@@ -57,6 +60,7 @@ S.Item = styled.li`
 S.Name = styled.p`
     @media only screen and (max-width: 1040px) {
         font-weight: 500;
+        padding-right: 10px;
     }
 `
 

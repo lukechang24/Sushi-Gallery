@@ -1,13 +1,13 @@
 import React from "react"
-
 import S from "./style"
+import NA from "../images/NA1.png"
 
 const FreshRolls = (props) => {
     const freshRolls = props.freshRolls ? props.freshRolls.elements : []
     const rollList = freshRolls.map((roll, i) => {
         return(
             <S.Roll key={i} className="roll">
-                <S.RollImg src={roll.url}></S.RollImg>
+                <S.RollImg src={NA}></S.RollImg>
                 <S.RollName>{roll.name.toUpperCase()}</S.RollName>
                 <S.InfoContainer>
                 <S.Price>${roll.price}</S.Price>
