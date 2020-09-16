@@ -7,7 +7,7 @@ const FreshRolls = (props) => {
     const rollList = freshRolls.map((roll, i) => {
         return(
             <S.Roll key={i} className="roll">
-                <S.RollImg src={NA}></S.RollImg>
+                <S.RollImg src={roll.url}></S.RollImg>
                 <S.RollName>{roll.name.toUpperCase()}</S.RollName>
                 <S.InfoContainer>
                 <S.Price>${roll.price}</S.Price>

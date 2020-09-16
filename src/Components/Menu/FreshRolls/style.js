@@ -28,7 +28,7 @@ S.Roll = styled.div`
     font-family: 'Cairo', sans-serif;
     position: relative;
     width: 275px;
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,7 +43,7 @@ S.Roll = styled.div`
 `
 S.RollImg = styled.img`
     height: 80%;
-    opacity: 0.75;
+    opacity: 0.85;
 `
 
 S.RollName = styled.h3`

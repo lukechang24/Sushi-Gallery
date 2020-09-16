@@ -1,6 +1,7 @@
 import styled from "styled-components"
-import background from "./images/background5.jpg"
-import chain from "./images/chain.png"
+// import background from "./images/background5.jpg"
+import background from "./images/wood1.jpg"
+import chain from "./images/chain1.png"
 
 const S = {}
 
@@ -12,7 +13,9 @@ S.Container1 = styled.div`
     flex-direction: column;
     align-items: center;
     background: white url(${background});
-    background-size: 400px;
+    background-size: 100%;
+    /* background-color: #FFECB4; */
+    /* background-size: 400px; */
     background-repeat: repeat;
     z-index: 1;
     @media only screen and (max-width: 1300px) {
@@ -20,10 +23,10 @@ S.Container1 = styled.div`
     }
     @media only screen and (max-width: 1040px) {
         width: 100%;
-        background-size: 350px;
+        /* background-size: 350px; */
     }
     @media only screen and (max-width: 375px) {
-        background-size: 300px;
+        /* background-size: 300px; */
     }
 `
 
@@ -60,7 +63,6 @@ S.Tab = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0C1821;
     background-image: linear-gradient(to bottom right, hsl(206, 47%, 10%), hsl(206, 47%, 20%));
     border-radius: 5px;
 `
@@ -89,7 +91,7 @@ S.TabName = styled.h3`
 S.TitleDiv = styled.div`
     width: 600px;
     background-image: ${props => props.color === "true" ? "linear-gradient(to right, hsl(36, 100%, 90%), hsl(45, 100%, 85%))" : null};
-    color: #444444;
+    /* color: #444444; */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-top: 75px;
@@ -126,7 +128,7 @@ S.Title = styled.h2`
 S.Message = styled.small`
     font-family: 'Work Sans', sans-serif;
     font-style: italic;
-    color: #565656;
+    /* color: #565656; */
     margin: 10px 0;
 `
 
@@ -143,7 +145,6 @@ S.DotDiv = styled.div`
 S.Dot = styled.div`
     width: 12px;
     height: 12px;
-    border: 1px solid black;
     border-radius: 25px;
     background-color: white;
     margin: 0 3px;
@@ -195,7 +196,7 @@ S.Overlay = styled.div`
     width: 100%;
     height: 100%;
     background-color: white;
-    opacity: 0.7;
+    opacity: 0.35;
     z-index: -2;
 `
 
