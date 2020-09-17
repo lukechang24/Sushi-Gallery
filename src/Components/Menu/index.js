@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Tabletop from "tabletop"
+import { withRouter } from "react-router-dom"
 
 import FreshRolls from "./FreshRolls"
 import CookedRolls from "./CookedRolls"
@@ -31,7 +32,7 @@ class Menu extends Component {
                 },
             }
         )
-        window.addEventListener("scroll", this.throttle(this.removeTabs, 50))
+        window.addEventListener("scroll", this.throttle)
     }
     componentDidUpdate() {
         this.addHover()
@@ -62,6 +63,7 @@ class Menu extends Component {
     }
     removeTabs = () => {
         const tabs = document.querySelector(".tabs")
+        if(!tabs) { return }
         if(window.scrollY > this.state.lastPos) {
             tabs.style.top = "-70px"
         } else {
@@ -71,11 +73,13 @@ class Menu extends Component {
             lastPos: window.scrollY
         })
     }
-    throttle = (fn, wait) => {
+    throttle = () => {
         let time = Date.now()
+        let fn = this.removeTabs()
         return function() {
-            if((time + wait - Date.now()) < 0) {
+            if((time + 75 - Date.now()) < 0) {
                 fn()
+                console.log("now")
                 time = Date.now()
             }
         }     
@@ -87,6 +91,9 @@ class Menu extends Component {
             currentTab: curTab
         })
         window.scrollTo(0, 0)
+    }
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.throttle)
     }
     render() {
         return(
@@ -184,4 +191,4 @@ class Menu extends Component {
     }
 }
 
-export default Menu
+export default withRouter(Menu)

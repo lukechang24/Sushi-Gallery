@@ -23,23 +23,39 @@ S.Container1 = styled.div`
 S.Container2 = styled.div`
     display: flex;
     justify-content: space-between;
+    background-color: black;
+    padding: 75px;
 `
 
 S.PhoneContainer = styled.div`
-
+    display: flex;
+    flex-direction: column;
 `
 
-S.PhoneNumber = styled.h3`
+S.PhoneHeading = styled.h1`
+    text-align: center;
+`
 
+S.PhoneNumber = styled.a`
+    font-size: 50px;
 `
 
 S.DeliveryContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 `
 
-S.DeliveryApp = styled.img`
+S.DeliveryHeading = styled.h1`
+    text-align: center;
+`
+
+S.DeliveryLink = styled.a`
+    
+`
+
+S.DeliveryImage = styled.img`
     width: 250px;
 `
 
