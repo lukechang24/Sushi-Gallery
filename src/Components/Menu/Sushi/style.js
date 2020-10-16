@@ -30,6 +30,7 @@ S.Container2 = styled.div`
     @media only screen and (max-width: 1040px) {
         width: 100%;
     }
+    font-family: 'Mansalva', sans-serif;
 `
 
 S.List = styled.ul`
@@ -37,17 +38,27 @@ S.List = styled.ul`
     display: flex;
     flex-direction: column;
     list-style: none;
+    padding-top: 10px;
     @media only screen and (max-width: 1040px) {
         width: 90%;
     }
 `
 
+S.SubCatergory = styled.h3`
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+    text-decoration: underline;
+    margin-top: 25px;
+`
+
 S.Item = styled.li`
-    font-family: 'Exo 2', sans-serif;
+    /* font-family: 'Mansalva', sans-serif; */
     display: flex;
     justify-content: space-between;
     color: #444444;
     font-size: 20px;
+    font-weight: lighter;
     margin: 20px 0;
     @media only screen and (max-width: 1040px) {
         margin: 15px 0;
@@ -74,7 +85,9 @@ S.PriceDiv = styled.div`
 `
 
 S.Message = styled.span`
+    font-family: 'Piazzolla', serif;
     width: 100%;
+    font-size: 20px;
     color: #565656;
     font-style: italic;
     text-align: center;

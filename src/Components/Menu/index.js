@@ -7,12 +7,13 @@ import CookedRolls from "./CookedRolls"
 import Sushi from "./Sushi"
 import Sides from "./Sides"
 import Beverages from "./Beverages"
+import Others from "./Others"
 
 import S from "./style"
 
 class Menu extends Component {
     state = {
-        tabs: ["Fresh Rolls", "Cooked Rolls", "Nigiri Sushi", "Sides", "Beverages"],
+        tabs: ["Fresh Rolls", "Cooked Rolls", "Nigiri Sushi", "Sides", "Others", "Beverages"],
         currentTab: "Fresh Rolls",
         data: {},
         loading: true,
@@ -104,6 +105,7 @@ class Menu extends Component {
                     <S.Dot name="Cooked Rolls" className={this.state.currentTab === "Cooked Rolls" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Nigiri Sushi" className={this.state.currentTab === "Nigiri Sushi" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Sides" className={this.state.currentTab === "Sides" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Others" className={this.state.currentTab === "Others" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Beverages" className={this.state.currentTab === "Beverages" ? "black" : null} onClick={this.changeTab}></S.Dot>
                 </S.DotDiv>
                 <S.ArrowDiv left="5px">
@@ -145,6 +147,13 @@ class Menu extends Component {
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
+                            <S.TabName name="Others" onClick={this.changeTab}>OTHERS</S.TabName>
+                        </S.Tab>
+                    </S.Sign>
+                    <S.Sign>
+                        <S.Tab>
+                            <S.Chain left></S.Chain>
+                            <S.Chain></S.Chain>
                             <S.TabName name="Beverages" onClick={this.changeTab}>BEVERAGES</S.TabName>
                         </S.Tab>
                     </S.Sign>
@@ -180,12 +189,12 @@ class Menu extends Component {
                         ?
                             <Sides sides={this.state.data.sides}/>
                         :
-                    this.state.currentTab === "Beverages"
+                    this.state.currentTab === "Others"
                         ?
-                            <Beverages beverages={this.state.data.beverages}/>
+                            <Others entrees={this.state.data.entrees} bentos={this.state.data.bentos} sushiCombo={this.state.data.sushiCombo} noodles={this.state.data.noodles} salads={this.state.data.salads} donburi={this.state.data.donburi} partyTrays={this.state.data.partyTrays}></Others>
                         :
-                            null
-                }
+                            <Beverages beverages={this.state.data.beverages}/>
+                    }
             </S.Container1>
         )
     }

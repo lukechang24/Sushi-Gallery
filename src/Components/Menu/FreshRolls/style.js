@@ -44,7 +44,7 @@ S.Roll = styled.div`
 S.RollImg = styled.img`
     height: 80%;
     opacity: 0.85;
-    filter: brightness(1.20);
+    filter: brightness(1.1);
 `
 
 S.RollName = styled.h3`
