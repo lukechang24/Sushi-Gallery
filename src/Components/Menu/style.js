@@ -12,9 +12,9 @@ S.Container1 = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: white url(${background});
+    /* background: white url(${background}); */
+    background-color: #C8C8C8;
     background-size: 100%;
-    /* background-color: #FFECB4; */
     /* background-size: 400px; */
     background-repeat: repeat;
     z-index: 1;
@@ -96,6 +96,7 @@ S.TitleDiv = styled.div`
     border-top-right-radius: 5px;
     margin-top: 75px;
     padding: 0 25px;
+    box-shadow: ${props => props.color === "true" ? "10px 12px 10px grey" : "none"};
     @media only screen and (max-width: 1040px) {
         width: 60%;
         padding: 0 3%;        

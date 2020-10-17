@@ -5,15 +5,15 @@ import { withRouter } from "react-router-dom"
 import FreshRolls from "./FreshRolls"
 import CookedRolls from "./CookedRolls"
 import Sushi from "./Sushi"
-import Sides from "./Sides"
-import Beverages from "./Beverages"
 import Others from "./Others"
+import Beverages from "./Beverages"
+import Combinations from "./Combinations"
 
 import S from "./style"
 
 class Menu extends Component {
     state = {
-        tabs: ["Fresh Rolls", "Cooked Rolls", "Nigiri Sushi", "Sides", "Others", "Beverages"],
+        tabs: ["Fresh Rolls", "Cooked Rolls", "Nigiri Sushi", "Combinations", "Others", "Beverages"],
         currentTab: "Fresh Rolls",
         data: {},
         loading: true,
@@ -104,7 +104,7 @@ class Menu extends Component {
                     <S.Dot name="Fresh Rolls" className={this.state.currentTab === "Fresh Rolls" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Cooked Rolls" className={this.state.currentTab === "Cooked Rolls" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Nigiri Sushi" className={this.state.currentTab === "Nigiri Sushi" ? "black" : null} onClick={this.changeTab}></S.Dot>
-                    <S.Dot name="Sides" className={this.state.currentTab === "Sides" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Combinations" className={this.state.currentTab === "Combinations" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Others" className={this.state.currentTab === "Others" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Beverages" className={this.state.currentTab === "Beverages" ? "black" : null} onClick={this.changeTab}></S.Dot>
                 </S.DotDiv>
@@ -140,7 +140,7 @@ class Menu extends Component {
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Sides" onClick={this.changeTab}>SIDES</S.TabName>
+                            <S.TabName name="Combinations" onClick={this.changeTab}>COMBINATONS</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
@@ -185,13 +185,13 @@ class Menu extends Component {
                         ?
                             <Sushi data={this.state.data} sushi={this.state.data.sushi}/>
                         :
-                    this.state.currentTab === "Sides"
+                    this.state.currentTab === "Combinations"
                         ?
-                            <Sides sides={this.state.data.sides}/>
+                            <Combinations entrees={this.state.data.entrees} bentos={this.state.data.bentos} sushiCombos={this.state.data.sushiCombo}></Combinations>
                         :
                     this.state.currentTab === "Others"
                         ?
-                            <Others entrees={this.state.data.entrees} bentos={this.state.data.bentos} sushiCombo={this.state.data.sushiCombo} noodles={this.state.data.noodles} salads={this.state.data.salads} donburi={this.state.data.donburi} partyTrays={this.state.data.partyTrays}></Others>
+                            <Others sides={this.state.data.sides} noodles={this.state.data.noodles} salads={this.state.data.salads} donburi={this.state.data.donburi} partyTrays={this.state.data.partyTrays}/>
                         :
                             <Beverages beverages={this.state.data.beverages}/>
                     }

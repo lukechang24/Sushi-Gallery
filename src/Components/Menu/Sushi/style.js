@@ -12,6 +12,7 @@ S.Container1 = styled.div`
     border-bottom-right-radius: 5px;
     padding: 0 25px 25px;
     margin-bottom: 50px;
+    box-shadow: 10px 10px 10px grey;
     @media only screen and (max-width: 1040px) {
         width: 60%;
         padding: 0 3% 15px;
@@ -27,6 +28,7 @@ S.Container2 = styled.div`
     display: flex;
     justify-content: center;
     background-color: white;
+    padding: 0 0 30px;
     @media only screen and (max-width: 1040px) {
         width: 100%;
     }
@@ -59,10 +61,22 @@ S.Item = styled.li`
     color: #444444;
     font-size: 20px;
     font-weight: lighter;
-    margin: 20px 0;
+    margin: 30px 0 0;
     @media only screen and (max-width: 1040px) {
-        margin: 15px 0;
+        margin: 15px 0 0;
     }
+    @media only screen and (max-width: 650px) {
+        font-size: 15px;
+    }
+`
+S.ItemDescriptionBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+`
+
+S.Description = styled.p`
+    font-family: 'Piazzolla', serif;
     @media only screen and (max-width: 650px) {
         font-size: 15px;
     }
@@ -76,6 +90,8 @@ S.Name = styled.p`
 `
 
 S.Price = styled.p`
+    font-family: 'Piazzolla', serif;
+    font-weight: bolder;
     margin: ${props => props.margin ? props.margin : 0};
 `
 
