@@ -83,6 +83,7 @@ S.TabName = styled.h3`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 12px;
     color: #F0EFEF;
     padding: 0 7.5px;

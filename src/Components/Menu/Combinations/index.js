@@ -23,8 +23,8 @@ const Combinations = (props) => {
     const sushiCombos = props.sushiCombos ? props.sushiCombos.elements : []
     const sushiCombosList = sushiCombos.map((sushiCombo, i) => {
         return(
-            <S.ItemDescriptionBox>
-                <S.Item key={i}>
+            <S.ItemDescriptionBox key={i}>
+                <S.Item>
                     <S.Name>{sushiCombo.name}</S.Name>
                     <S.Price>${sushiCombo.price}</S.Price>
                 </S.Item>
@@ -37,11 +37,14 @@ const Combinations = (props) => {
             <S.Container2>
                 <S.List>
                     <S.SubCatergory>Entrees</S.SubCatergory>
+                    <S.Message>Comes with rice, salad, and 4pc Cali Roll</S.Message>
                     {entreesList}
                     <S.SubCatergory>Bento Box &nbsp;(pick two)</S.SubCatergory>
-                    <S.Message>${bentosPrice}</S.Message>
+                    <S.Message>Comes with rice, salad, and 4pc Cali Roll</S.Message>
+                    <S.Price>${bentosPrice}</S.Price>
                     {bentosList}
                     <S.SubCatergory>Sushi Combo</S.SubCatergory>
+                    <S.Message>Comes with salad</S.Message>
                     {sushiCombosList}
                 </S.List>
             </S.Container2>

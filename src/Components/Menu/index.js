@@ -2,8 +2,8 @@ import React, { Component } from "react"
 import Tabletop from "tabletop"
 import { withRouter } from "react-router-dom"
 
-import FreshRolls from "./FreshRolls"
-import CookedRolls from "./CookedRolls"
+import Rolls from "./Rolls"
+import Sides from "./Sides"
 import Sushi from "./Sushi"
 import Others from "./Others"
 import Beverages from "./Beverages"
@@ -13,8 +13,8 @@ import S from "./style"
 
 class Menu extends Component {
     state = {
-        tabs: ["Fresh Rolls", "Cooked Rolls", "Nigiri Sushi", "Combinations", "Others", "Beverages"],
-        currentTab: "Fresh Rolls",
+        tabs: ["Rolls", "Sides", "Nigiri Sushi", "Combinations", "Others", "Beverages"],
+        currentTab: "Rolls",
         data: {},
         loading: true,
         lastPos: 0
@@ -24,7 +24,7 @@ class Menu extends Component {
             {
                 key: '1FrbltyDxYZzZ2AH90UZN91dCfjqS-fbHCfbf0vldBkE',
                 callback: googleData => {
-                    console.log(googleData, "here")
+                    // console.log(googleData, "here")
                     const data = googleData
                     this.setState({
                         data: googleData,
@@ -101,8 +101,8 @@ class Menu extends Component {
             <S.Container1>
                 <S.Overlay></S.Overlay>
                 <S.DotDiv>
-                    <S.Dot name="Fresh Rolls" className={this.state.currentTab === "Fresh Rolls" ? "black" : null} onClick={this.changeTab}></S.Dot>
-                    <S.Dot name="Cooked Rolls" className={this.state.currentTab === "Cooked Rolls" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Rolls" className={this.state.currentTab === "Rolls" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Sides" className={this.state.currentTab === "Sides" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Nigiri Sushi" className={this.state.currentTab === "Nigiri Sushi" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Combinations" className={this.state.currentTab === "Combinations" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Others" className={this.state.currentTab === "Others" ? "black" : null} onClick={this.changeTab}></S.Dot>
@@ -119,14 +119,14 @@ class Menu extends Component {
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Fresh Rolls" onClick={this.changeTab}>FRESH ROLLS</S.TabName>
+                            <S.TabName name="Rolls" onClick={this.changeTab}>ROLLS</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Cooked Rolls" onClick={this.changeTab}>COOKED ROLLS</S.TabName>
+                            <S.TabName name="Sides" onClick={this.changeTab}>SIDES</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
@@ -158,28 +158,28 @@ class Menu extends Component {
                         </S.Tab>
                     </S.Sign>
                 </S.TabContainer>
-                <S.TitleDiv className={this.state.loading ? "hide" : ""} color={this.state.currentTab === "Fresh Rolls" || this.state.currentTab === "Cooked Rolls" ? "false" : "true"}>
+                <S.TitleDiv className={this.state.loading ? "hide" : ""} color={this.state.currentTab === "Rolls" ? "false" : "true"}>
                     <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
                 </S.TitleDiv>
-                {
+                {/* {
                     this.state.currentTab === "Fresh Rolls" || this.state.currentTab === "Cooked Rolls"
                         ?
                             <S.Message>*hover to see more details</S.Message>
                         :
                             null
-                }
+                } */}
                 {
                     this.state.loading
                         ?
                             <S.Spinner className="fas fa-circle-notch fa-spin"></S.Spinner>
                         :
-                    this.state.currentTab === "Fresh Rolls"
+                    this.state.currentTab === "Rolls"
                         ?
-                            <FreshRolls freshRolls={this.state.data.freshRolls}/>
+                            <Rolls freshRolls={this.state.data.freshRolls} cookedRolls={this.state.data.cookedRolls}/>
                         :
-                    this.state.currentTab === "Cooked Rolls"
+                    this.state.currentTab === "Sides"
                         ?
-                            <CookedRolls cookedRolls={this.state.data.cookedRolls}/>
+                            <Sides data={this.state.data} sides={this.state.data.sides}/>
                         :
                     this.state.currentTab === "Nigiri Sushi"
                         ?
@@ -191,7 +191,7 @@ class Menu extends Component {
                         :
                     this.state.currentTab === "Others"
                         ?
-                            <Others sides={this.state.data.sides} noodles={this.state.data.noodles} salads={this.state.data.salads} donburi={this.state.data.donburi} partyTrays={this.state.data.partyTrays}/>
+                            <Others sides={this.state.data.sides} noodles={this.state.data.noodles} salads={this.state.data.salads} donburi={this.state.data.donburi} partyTrays={this.state.data.partyTrays} desserts={this.state.data.desserts}/>
                         :
                             <Beverages beverages={this.state.data.beverages}/>
                     }

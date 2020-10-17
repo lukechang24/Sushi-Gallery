@@ -11,6 +11,24 @@ const fadeIn = keyframes`
     }
 `
 
+S.Container1 = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+S.SubCatergory = styled.h3`
+    font-family: 'Mansalva', sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+    text-decoration: underline;
+    margin: 25px;
+    @media only screen and (max-width: 650px) {
+        font-size: 25px;
+    }
+`
+
 S.RollContainer = styled.div`
     animation: 0.5s ${fadeIn} ease-out;
     width: 90%;
@@ -21,13 +39,17 @@ S.RollContainer = styled.div`
     grid-row-gap: 50px;
     margin: 0px 25px 25px;
     margin-bottom: 25px;
+    @media only screen and (max-width: 650px) {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
+        grid-column-gap: 25px;
+    }
 `
 
 S.Roll = styled.div`
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
     position: relative;
-    width: 275px;
+    /* width: 100%; */
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -39,6 +61,9 @@ S.Roll = styled.div`
         visibility: visible;
         flex-direction: column;
         opacity: 0.9;
+    }
+    @media only screen and (max-width: 650px) {
+        height: 125px;
     }
 `
 S.RollImg = styled.img`
@@ -54,6 +79,9 @@ S.RollName = styled.h3`
     justify-content: center;
     background: black linear-gradient(to right, hsl(206, 47%, 10%), hsl(206, 47%, 25%), hsl(206, 47%, 10%));
     color: rgba(255,255,255);
+    @media only screen and (max-width: 650px) {
+        font-size: 10px;
+    }
 `
 
 S.InfoContainer = styled.div`
@@ -72,11 +100,17 @@ S.InfoTitle = styled.h2`
     color: black;
     padding-left: 5px;
     margin: 0 0 5px;
+    @media only screen and (max-width: 650px) {
+        font-size: 12px;
+    }
 `
 
 S.Info = styled.p`
     color: #0C1821;
     padding: 0 5px;
+    @media only screen and (max-width: 650px) {
+        font-size: 10px;
+    }
 `
 
 S.Price = styled.p`
@@ -84,6 +118,10 @@ S.Price = styled.p`
     right: 5px;
     top: 7px;
     font-size: 20px;
+    @media only screen and (max-width: 650px) {
+        top: 3.5px;
+        font-size: 10px;
+    }
 `
 
 S.Bold = styled.span`

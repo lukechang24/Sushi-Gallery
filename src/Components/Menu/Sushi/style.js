@@ -23,6 +23,7 @@ S.Container1 = styled.div`
 `
 
 S.Container2 = styled.div`
+    font-family: 'Mansalva', sans-serif;
     width: 90%;
     min-height: 85vh;
     display: flex;
@@ -32,7 +33,6 @@ S.Container2 = styled.div`
     @media only screen and (max-width: 1040px) {
         width: 100%;
     }
-    font-family: 'Mansalva', sans-serif;
 `
 
 S.List = styled.ul`
@@ -51,7 +51,7 @@ S.SubCatergory = styled.h3`
     font-size: 25px;
     font-weight: lighter;
     text-decoration: underline;
-    margin-top: 25px;
+    margin-top: 50px;
 `
 
 S.Item = styled.li`
@@ -77,6 +77,7 @@ S.ItemDescriptionBox = styled.div`
 
 S.Description = styled.p`
     font-family: 'Piazzolla', serif;
+    padding-right: 15%;
     @media only screen and (max-width: 650px) {
         font-size: 15px;
     }
@@ -92,6 +93,7 @@ S.Name = styled.p`
 S.Price = styled.p`
     font-family: 'Piazzolla', serif;
     font-weight: bolder;
+    text-align: center;
     margin: ${props => props.margin ? props.margin : 0};
 `
 
@@ -107,7 +109,11 @@ S.Message = styled.span`
     color: #565656;
     font-style: italic;
     text-align: center;
-    margin-top: 25px;
+    margin: 15px 0;
+    @media only screen and (max-width: 650px) {
+        font-size: 12.5px;
+    }
+    
 `
 
 
