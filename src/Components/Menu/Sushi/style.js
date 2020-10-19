@@ -48,19 +48,18 @@ S.List = styled.ul`
 
 S.SubCatergory = styled.h3`
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: lighter;
     text-decoration: underline;
     margin-top: 50px;
 `
 
 S.Item = styled.li`
-    /* font-family: 'Mansalva', sans-serif; */
+    font-family: 'Piazzolla', serif;
     display: flex;
     justify-content: space-between;
     color: #444444;
     font-size: 20px;
-    font-weight: lighter;
     margin: 30px 0 0;
     @media only screen and (max-width: 1040px) {
         margin: 15px 0 0;
@@ -84,6 +83,7 @@ S.Description = styled.p`
 `
 
 S.Name = styled.p`
+    font-weight: 600;
     @media only screen and (max-width: 1040px) {
         font-weight: 500;
         padding-right: 10px;
@@ -92,7 +92,6 @@ S.Name = styled.p`
 
 S.Price = styled.p`
     font-family: 'Piazzolla', serif;
-    font-weight: bolder;
     text-align: center;
     margin: ${props => props.margin ? props.margin : 0};
 `

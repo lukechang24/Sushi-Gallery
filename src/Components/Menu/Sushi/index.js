@@ -7,7 +7,7 @@ const Sushi = (props) => {
         const newName = sushi.name.split("").map((letter, i, arr) => arr.indexOf("(") < i && arr.indexOf("(") >= 0 ? letter : letter.toUpperCase()).join("")
         return(
             <S.Item key={i}>
-                <S.Name>{newName}</S.Name>
+                <S.Name>{sushi.name}</S.Name>
                 <S.Price>${sushi.price}</S.Price>
             </S.Item>
         )
