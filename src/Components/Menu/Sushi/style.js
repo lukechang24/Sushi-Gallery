@@ -12,7 +12,7 @@ S.Container1 = styled.div`
     border-bottom-right-radius: 5px;
     padding: 0 25px 25px;
     margin-bottom: 50px;
-    box-shadow: 10px 10px 10px grey;
+    box-shadow: 12.5px 12.5px 10px rgb(44,43,47), -12.5px 12.5px 10px rgb(44,43,47);
     @media only screen and (max-width: 1040px) {
         width: 60%;
         padding: 0 3% 15px;

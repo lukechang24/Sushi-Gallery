@@ -1,6 +1,5 @@
 import React from "react"
 import S from "./style"
-import NA from "../images/NA1.png"
 
 const Rolls = (props) => {
     const freshRolls = props.freshRolls ? props.freshRolls.elements : []

@@ -1,6 +1,5 @@
 import styled from "styled-components"
-// import background from "./images/background5.jpg"
-import background from "./images/wood1.jpg"
+import background from "./images/wood2.jpg"
 import chain from "./images/chain1.png"
 
 const S = {}
@@ -12,10 +11,8 @@ S.Container1 = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background: white url(${background}); */
-    background-color: #C8C8C8;
+    background: white url(${background});
     background-size: 100%;
-    /* background-size: 400px; */
     background-repeat: repeat;
     z-index: 1;
     @media only screen and (max-width: 1300px) {
@@ -65,6 +62,7 @@ S.Tab = styled.div`
     align-items: center;
     background-image: linear-gradient(to bottom right, hsl(206, 47%, 10%), hsl(206, 47%, 20%));
     border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
 `
 
 S.Chain = styled.div`
@@ -97,7 +95,8 @@ S.TitleDiv = styled.div`
     border-top-right-radius: 5px;
     margin-top: 75px;
     padding: 0 25px;
-    box-shadow: ${props => props.color === "true" ? "10px 12px 10px grey" : "none"};
+    box-shadow: ${props => props.color === "true" ? "12.5px 10px 10px rgb(44,43,47), -12.5px 10px 10px rgb(44,43,47)" : "none"};
+    z-index: -1;
     @media only screen and (max-width: 1040px) {
         width: 60%;
         padding: 0 3%;        
@@ -198,7 +197,7 @@ S.Overlay = styled.div`
     width: 100%;
     height: 100%;
     background-color: white;
-    opacity: 0.35;
+    opacity: 0.2;
     z-index: -2;
 `
 

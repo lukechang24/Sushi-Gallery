@@ -1,6 +1,5 @@
 import React from "react"
 import S from "../Sushi/style"
-import NA from "../images/NA1.png"
 
 const Sides = (props) => {
     const sides = props.sides ? props.sides.elements : []

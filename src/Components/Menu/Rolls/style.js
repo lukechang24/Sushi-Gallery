@@ -54,7 +54,7 @@ S.Roll = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color: black;
     border: 3px solid #0C1821;
     border-bottom: none;
     &.show :nth-child(3) {
