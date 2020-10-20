@@ -174,12 +174,12 @@ S.ArrowName = styled.p`
 
 S.LeftArrow = styled.i`
     font-size: 40px;
-    color: #444444;
+    color: white;
 `
 
 S.RightArrow = styled.i`
     font-size: 40px;
-    color: #444444;
+    color: white;
 `
 
 S.Spinner = styled.i`
@@ -197,7 +197,7 @@ S.Overlay = styled.div`
     width: 100%;
     height: 100%;
     background-color: white;
-    opacity: 0.2;
+    opacity: 0.15;
     z-index: -2;
 `
 

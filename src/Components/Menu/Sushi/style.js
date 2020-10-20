@@ -55,14 +55,15 @@ S.SubCatergory = styled.h3`
 `
 
 S.Item = styled.li`
+    width: ${props => props.isBento === "true" ? "100%" : props.half === "true" ? "50%" : "auto"};
     font-family: 'Piazzolla', serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: ${props => props.isBento === "true" ? "start" : props.half === "true" ? "center" : "space-between"};
     color: #444444;
     font-size: 20px;
-    margin: 30px 0 0;
+    margin: ${props => props.half === "true" ? "none" : "30px 0 0"};
     @media only screen and (max-width: 1040px) {
-        margin: 15px 0 0;
+        margin: ${props => props.half === "true" ? "none" : "15px 0 0"};
     }
     @media only screen and (max-width: 650px) {
         font-size: 15px;
@@ -84,9 +85,11 @@ S.Description = styled.p`
 
 S.Name = styled.p`
     font-weight: 600;
+    text-align: ${props => props.isBento === "true" ? "center" : "left"};
+    margin: ${props => props.isBento ? "0 25px" : "none"};
     @media only screen and (max-width: 1040px) {
-        font-weight: 500;
         padding-right: 10px;
+        margin-left: ${props => props.isBento ? "10px" : "none"};
     }
 `
 

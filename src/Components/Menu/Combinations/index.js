@@ -14,9 +14,19 @@ const Combinations = (props) => {
     const bentos = props.bentos ? props.bentos.elements : []
     const bentosPrice = bentos[0].price
     const bentosList = bentos.map((bento, i) => {
+        const firstItem = bento.name
+        const secondItem = bentos[i+1] ? bentos[i+1].name : null
+        if(i % 2 === 1) {
+            return
+        }
         return(
-            <S.Item key={i}>
-                <S.Name>{bento.name}</S.Name>
+            <S.Item isBento="true" key={i} component="div">
+                <S.Item half="true">
+                    <S.Name isBento="true">{firstItem}</S.Name>
+                </S.Item>
+                <S.Item half="true">
+                    <S.Name isBento="true">{secondItem}</S.Name>
+                </S.Item>
             </S.Item>
         )
     })
