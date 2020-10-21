@@ -44,8 +44,8 @@ const Others = (props) => {
     const desserts = props.desserts ? props.desserts.elements : []
     const dessertsList = desserts.map((dessert, i) => {
         return(
-            <S.ItemDescriptionBox>
-                <S.Item key={i}>
+            <S.ItemDescriptionBox key={i}>
+                <S.Item>
                     <S.Name>{dessert.name}</S.Name>
                     <S.Price>${dessert.price}</S.Price>
                 </S.Item>

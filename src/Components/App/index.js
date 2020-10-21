@@ -6,7 +6,7 @@ import HamburgerNav from "../HamburgerNav"
 import Home from "../Home"
 import Menu from "../Menu"
 import About from "../About"
-import Contact from "../Contact"
+import Delivery from "../Delivery"
 
 import S from "./style"
 
@@ -47,7 +47,7 @@ class App extends Component {
           <Route exact path="/" render={() => <Home />}></Route>
           <Route path="/menu" render={() => <Menu />}></Route>
           <Route path="/about" render={() => <About />}></Route>
-          <Route path="/delivery" render={() => <Contact />}></Route>
+          <Route path="/delivery" render={() => <Delivery />}></Route>
           <Route component={My404}></Route>
         </Switch>
         {/* <S.Footer></S.Footer> */}

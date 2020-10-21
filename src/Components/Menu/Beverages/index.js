@@ -6,8 +6,8 @@ const Beverages = (props) => {
     const beveragesList = beverages.map((beverage, i) => {
         const newName = beverage.name.split("").map((letter, i, arr) => arr.indexOf("(") < i && arr.indexOf("(") >= 0 ? letter : letter.toUpperCase()).join("")
         return(
-            <S.ItemDescriptionBox>
-                <S.Item key={i}>
+            <S.ItemDescriptionBox key={i}>
+                <S.Item>
                     <S.Name>{beverage.name}</S.Name>
                     {
                         beverage.small

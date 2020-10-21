@@ -20,7 +20,7 @@ const Combinations = (props) => {
             return
         }
         return(
-            <S.Item isBento="true" key={i} component="div">
+            <S.Item isBento="true" key={i}>
                 <S.Item half="true">
                     <S.Name isBento="true">{firstItem}</S.Name>
                 </S.Item>
