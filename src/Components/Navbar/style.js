@@ -95,12 +95,21 @@ S.Hours = styled.p`
 
 S.Location = styled.a`
     width: 75%;
-    font-size: 18px;
+    font-size: 15px;
     word-spacing: 5px;
     color: white;
     text-align: center;
     margin: 10px 0;
-    display: none;
+    /* display: none; */
+`
+
+S.PhoneNumber = styled.a`
+    font-size: 15px;
+    color: white;
+`
+
+S.PhoneIcon = styled.i`
+    border-radius: 5px;
 `
 
 export default S

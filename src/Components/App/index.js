@@ -47,7 +47,7 @@ class App extends Component {
           <Route exact path="/" render={() => <Home />}></Route>
           <Route path="/menu" render={() => <Menu />}></Route>
           <Route path="/about" render={() => <About />}></Route>
-          <Route path="/contact" render={() => <Contact />}></Route>
+          <Route path="/delivery" render={() => <Contact />}></Route>
           <Route component={My404}></Route>
         </Switch>
         {/* <S.Footer></S.Footer> */}

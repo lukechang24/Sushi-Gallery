@@ -6,10 +6,13 @@ const Sides = (props) => {
     const sidesList = sides.map((side, i) => {
         const newName = side.name.split("").map((letter, i, arr) => arr.indexOf("(") < i && arr.indexOf("(") >= 0 ? letter : letter.toUpperCase()).join("")
         return(
-            <S.Item key={i}>
-                <S.Name>{side.name}</S.Name>
-                <S.Price>${side.price}</S.Price>
-            </S.Item>
+            <S.ItemDescriptionBox key={i}>
+                <S.Item>
+                    <S.Name>{side.name}</S.Name>
+                    <S.Price>${side.price}</S.Price>
+                </S.Item>
+                <S.Description>{side.description}</S.Description>
+            </S.ItemDescriptionBox>
         )
     })
     return(

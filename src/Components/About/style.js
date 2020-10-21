@@ -22,7 +22,7 @@ S.Container1 = styled.div`
 
 S.Container2 = styled.div`
     width: 80%;
-    height: 80%;
+    min-height: 80%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -30,7 +30,7 @@ S.Container2 = styled.div`
     border: 3px solid black;
     border-radius: 25px;
     z-index: 2;
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         flex-direction: column;
         align-items: center;
     }
@@ -42,7 +42,7 @@ S.TextContainer = styled.div`
     flex-direction: column;
     align-items: center;
     margin: auto 0;
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         width: 80%;
     }
 `
@@ -62,7 +62,7 @@ S.About = styled.p`
     @media only screen and (max-width: 1040px) {
         font-size: 13px;
     }
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         /* font-size: 10px; */
         line-height: 2;
     }
@@ -70,12 +70,10 @@ S.About = styled.p`
 
 S.Picture = styled.img`
     width: 35%;
-    /* height: 50%; */
     margin: auto 0;
-    /* background-image: url(${oki});
-    background-size: cover; */
-    @media only screen and (max-width: 650px) {
-        width: 30%;
+    @media only screen and (max-width: 700px) {
+        width: 50%;
+        margin: 25px 0 30px;
     }
 `
 

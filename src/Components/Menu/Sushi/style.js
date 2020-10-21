@@ -17,7 +17,7 @@ S.Container1 = styled.div`
         width: 60%;
         padding: 0 3% 15px;
     }
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         width: 80%;
     }
 `
@@ -50,8 +50,11 @@ S.SubCatergory = styled.h3`
     text-align: center;
     font-size: 30px;
     font-weight: lighter;
-    text-decoration: underline;
+    border: 3px solid black;
     margin-top: 50px;
+    @media only screen and (max-width: 700px) {
+        font-size: 25px;
+    }
 `
 
 S.Item = styled.li`
@@ -65,7 +68,7 @@ S.Item = styled.li`
     @media only screen and (max-width: 1040px) {
         margin: ${props => props.half === "true" ? "none" : "15px 0 0"};
     }
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         font-size: 15px;
     }
 `
@@ -78,8 +81,8 @@ S.ItemDescriptionBox = styled.div`
 S.Description = styled.p`
     font-family: 'Piazzolla', serif;
     padding-right: 15%;
-    @media only screen and (max-width: 650px) {
-        font-size: 15px;
+    @media only screen and (max-width: 700px) {
+        font-size: 12.5px;
     }
 `
 
@@ -112,7 +115,7 @@ S.Message = styled.span`
     font-style: italic;
     text-align: center;
     margin: 15px 0;
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         font-size: 12.5px;
     }
     

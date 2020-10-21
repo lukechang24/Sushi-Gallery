@@ -99,5 +99,13 @@ S.Hours = styled.p`
     text-align: center;
 `
 
+S.PhoneNumber = styled.a`
+    
+`
+
+S.PhoneIcon = styled.i`
+    /* border-radius: 5px; */
+`
+
 
 export default S

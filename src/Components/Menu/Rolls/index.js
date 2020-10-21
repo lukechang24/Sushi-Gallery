@@ -62,9 +62,9 @@ const Rolls = (props) => {
     })
     return(
         <S.Container1>
-            <S.SubCatergory>Fresh Rolls</S.SubCatergory>
+            <S.SubCatergory isRoll="true">FRESH ROLLS</S.SubCatergory>
             <S.RollContainer>{freshRollsList}</S.RollContainer>
-            <S.SubCatergory>Cooked Rolls</S.SubCatergory>
+            <S.SubCatergory isRoll="true">COOKED ROLLS</S.SubCatergory>
             <S.RollContainer>{cookedRollsList}</S.RollContainer>
         </S.Container1>
     )

@@ -19,12 +19,14 @@ S.Container1 = styled.div`
 `
 
 S.SubCatergory = styled.h3`
+    height: 55px;
     font-family: 'Mansalva', sans-serif;
-    font-size: 30px;
+    font-size: ${props => props.isRoll === "true" ? "40px" : "30px"};
     font-weight: lighter;
-    text-decoration: underline;
-    margin: 25px;
-    @media only screen and (max-width: 650px) {
+    border-bottom: 3.5px solid black;
+    margin: 25px 0 50px;
+    @media only screen and (max-width: 700px) {
+        height: 35px;
         font-size: 25px;
     }
 `
@@ -39,7 +41,7 @@ S.RollContainer = styled.div`
     grid-row-gap: 50px;
     margin: 0px 25px 25px;
     margin-bottom: 25px;
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
         grid-column-gap: 25px;
     }
@@ -62,14 +64,14 @@ S.Roll = styled.div`
         flex-direction: column;
         opacity: 0.9;
     }
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         height: 125px;
     }
 `
 S.RollImg = styled.img`
     height: 80%;
     opacity: 0.85;
-    filter: brightness(1.1);
+    filter: brightness(1.3);
 `
 
 S.RollName = styled.h3`
@@ -79,7 +81,7 @@ S.RollName = styled.h3`
     justify-content: center;
     background: black linear-gradient(to right, hsl(206, 47%, 10%), hsl(206, 47%, 25%), hsl(206, 47%, 10%));
     color: rgba(255,255,255);
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         font-size: 10px;
     }
 `
@@ -100,7 +102,7 @@ S.InfoTitle = styled.h2`
     color: black;
     padding-left: 5px;
     margin: 0 0 5px;
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         font-size: 12px;
     }
 `
@@ -108,7 +110,7 @@ S.InfoTitle = styled.h2`
 S.Info = styled.p`
     color: #0C1821;
     padding: 0 5px;
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         font-size: 10px;
     }
 `
@@ -118,7 +120,7 @@ S.Price = styled.p`
     right: 5px;
     top: 7px;
     font-size: 20px;
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         top: 3.5px;
         font-size: 10px;
     }

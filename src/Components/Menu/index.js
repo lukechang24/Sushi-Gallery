@@ -159,7 +159,7 @@ class Menu extends Component {
                     </S.Sign>
                 </S.TabContainer>
                 <S.TitleDiv className={this.state.loading ? "hide" : ""} color={this.state.currentTab === "Rolls" ? "false" : "true"}>
-                    <S.Title>{this.state.currentTab.toUpperCase()}</S.Title>
+                    <S.Title tab={this.state.currentTab}>{this.state.currentTab.toUpperCase()}</S.Title>
                 </S.TitleDiv>
                 {/* {
                     this.state.currentTab === "Fresh Rolls" || this.state.currentTab === "Cooked Rolls"

@@ -23,7 +23,7 @@ S.Container1 = styled.div`
 S.Container2 = styled.div`
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    /* background-color: black; */
     padding: 75px;
 `
 

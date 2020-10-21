@@ -47,10 +47,10 @@ const Combinations = (props) => {
             <S.Container2>
                 <S.List>
                     <S.SubCatergory>Entrees</S.SubCatergory>
-                    <S.Message>Comes with rice, salad, and 4pc Cali Roll</S.Message>
+                    <S.Message>Comes with rice, salad, and 4pcs of Cali Roll</S.Message>
                     {entreesList}
                     <S.SubCatergory>Bento Box &nbsp;(pick two)</S.SubCatergory>
-                    <S.Message>Comes with rice, salad, and 4pc Cali Roll</S.Message>
+                    <S.Message>Comes with rice, salad, and 4pcs of Cali Roll</S.Message>
                     <S.Price>${bentosPrice}</S.Price>
                     {bentosList}
                     <S.SubCatergory>Sushi Combo</S.SubCatergory>

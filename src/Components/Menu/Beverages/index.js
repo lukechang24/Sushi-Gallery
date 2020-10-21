@@ -6,19 +6,22 @@ const Beverages = (props) => {
     const beveragesList = beverages.map((beverage, i) => {
         const newName = beverage.name.split("").map((letter, i, arr) => arr.indexOf("(") < i && arr.indexOf("(") >= 0 ? letter : letter.toUpperCase()).join("")
         return(
-            <S.Item key={i}>
-                <S.Name>{beverage.name}</S.Name>
-                {
-                    beverage.small
-                        ?
-                            <S.PriceDiv>
-                                <S.Price margin="5px 0">S: ${beverage.small}</S.Price>
-                                <S.Price margin="5px 0">L: ${beverage.large}</S.Price>
-                            </S.PriceDiv>
-                        :
-                            <S.Price>${beverage.price}</S.Price>
-                }
-            </S.Item>
+            <S.ItemDescriptionBox>
+                <S.Item key={i}>
+                    <S.Name>{beverage.name}</S.Name>
+                    {
+                        beverage.small
+                            ?
+                                <S.PriceDiv>
+                                    <S.Price margin="5px 0">S: ${beverage.small}</S.Price>
+                                    <S.Price margin="5px 0">L: ${beverage.large}</S.Price>
+                                </S.PriceDiv>
+                            :
+                                <S.Price>${beverage.price}</S.Price>
+                    }
+                </S.Item>
+                <S.Description>{beverage.description}</S.Description>
+            </S.ItemDescriptionBox>
         )
     })
     return(

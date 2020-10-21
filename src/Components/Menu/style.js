@@ -102,7 +102,7 @@ S.TitleDiv = styled.div`
         padding: 0 3%;        
         margin-top: 50px;
     }
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         width: 80%;
     }
     &.hide {
@@ -121,9 +121,10 @@ S.Title = styled.h2`
         margin: 15px 0 5px;
         font-size: 35px;
     }
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         font-size: 25px;
     }
+    display: ${props => props.tab === "Rolls" ? "none" : "block"};
 `
 
 S.Message = styled.small`
