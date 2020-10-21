@@ -7,7 +7,7 @@ S.Hamburger = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    margin-left: 25px;
+    margin-left: 2.5%;
     height: 45px;
     width: 45px;
     z-index: 3;

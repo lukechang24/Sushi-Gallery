@@ -20,27 +20,8 @@ S.Container1 = styled.div`
     }
 `
 
-S.Container2 = styled.div`
-    display: flex;
-    justify-content: space-between;
-    /* background-color: black; */
-    padding: 75px;
-`
-
-S.PhoneContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
-S.PhoneHeading = styled.h1`
-    text-align: center;
-`
-
-S.PhoneNumber = styled.a`
-    font-size: 50px;
-`
-
 S.DeliveryContainer = styled.div`
+    font-family: 'Cairo', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,15 +29,26 @@ S.DeliveryContainer = styled.div`
 `
 
 S.DeliveryHeading = styled.h1`
+    /* width: 80%; */
+    font-size: 30px;
     text-align: center;
+    margin: 0 0 25px;
+    @media only screen and (max-width: 700px) {
+        font-size: 25px;
+    }
 `
 
 S.DeliveryLink = styled.a`
-    
+
 `
 
 S.DeliveryImage = styled.img`
     width: 250px;
+    border: 5px solid transparent;
+    border-radius: 30px;
+    :hover {
+        border: 5px solid black;
+    }
 `
 
 S.Green = styled.span`

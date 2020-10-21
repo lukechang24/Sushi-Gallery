@@ -22,7 +22,7 @@ const Navbar = () => {
                 <S.Icon href="https://www.instagram.com/sushigallery007/" target="_blank" title="Instagram" color="white" className="fab fa-instagram"></S.Icon>
             </S.SocialContainer>
             <S.Location href="https://www.google.com/maps/place/16436+Norwalk+Blvd,+Cerritos,+CA+90703/@33.8809807,-118.0744492,17z/data=!3m1!4b1!4m5!3m4!1s0x80dd2d193db815cd:0x8384f6c6b8a569ea!8m2!3d33.8809807!4d-118.0722605" target="_blank">16436 Norwalk Blvd Cerritos, CA 90703</S.Location>
-            <S.PhoneNumber href="tel:562-926-6556"><i class="fas fa-phone-square-alt"></i>(562) 926-6556</S.PhoneNumber>
+            <S.PhoneNumber href="tel:562-926-6556"><S.PhoneIcon></S.PhoneIcon>(562) 926-6556</S.PhoneNumber>
         </S.Navbar>
     )
 }

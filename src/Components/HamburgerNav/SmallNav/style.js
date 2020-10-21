@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { NavLink } from "react-router-dom"
+import { Phone } from "@styled-icons/boxicons-regular/Phone"
 
 const S = {}
 
@@ -12,7 +13,7 @@ S.Navbar = styled.div`
     align-items: center;
     flex-direction: column;
     background-color: #0C1821;
-    margin-left: 25px;
+    margin-left: 2.5%;
     @media only screen and (max-width: 1040px) {
         width: 400px;
     }
@@ -72,7 +73,7 @@ S.SocialContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin: 50px 0 75px;
 `
 
 S.Icon = styled.a`
@@ -99,12 +100,23 @@ S.Hours = styled.p`
     text-align: center;
 `
 
-S.PhoneNumber = styled.a`
-    
+S.Location = styled.a`
+    width: 75%;
+    font-size: 15px;
+    word-spacing: 5px;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
 `
 
-S.PhoneIcon = styled.i`
-    /* border-radius: 5px; */
+S.PhoneNumber = styled.a`
+    font-size: 15px;
+    color: white;
+`
+
+S.PhoneIcon = styled(Phone)`
+    width: 15px;
+    margin: 0 5px;
 `
 
 
