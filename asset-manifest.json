@@ -1,24 +1,28 @@
 {
   "files": {
-    "main.css": "/Sushi-Gallery/static/css/main.a1bd2ab3.chunk.css",
-    "main.js": "/Sushi-Gallery/static/js/main.03ba57f9.chunk.js",
-    "main.js.map": "/Sushi-Gallery/static/js/main.03ba57f9.chunk.js.map",
-    "runtime-main.js": "/Sushi-Gallery/static/js/runtime-main.eb73472a.js",
-    "runtime-main.js.map": "/Sushi-Gallery/static/js/runtime-main.eb73472a.js.map",
-    "static/js/2.1d567dc1.chunk.js": "/Sushi-Gallery/static/js/2.1d567dc1.chunk.js",
-    "static/js/2.1d567dc1.chunk.js.map": "/Sushi-Gallery/static/js/2.1d567dc1.chunk.js.map",
+    "main.css": "/Sushi-Gallery/static/css/main.bb4c0932.chunk.css",
+    "main.js": "/Sushi-Gallery/static/js/main.f28f5926.chunk.js",
+    "main.js.map": "/Sushi-Gallery/static/js/main.f28f5926.chunk.js.map",
+    "runtime-main.js": "/Sushi-Gallery/static/js/runtime-main.a147124f.js",
+    "runtime-main.js.map": "/Sushi-Gallery/static/js/runtime-main.a147124f.js.map",
+    "static/js/2.c5bbe055.chunk.js": "/Sushi-Gallery/static/js/2.c5bbe055.chunk.js",
+    "static/js/2.c5bbe055.chunk.js.map": "/Sushi-Gallery/static/js/2.c5bbe055.chunk.js.map",
     "index.html": "/Sushi-Gallery/index.html",
-    "precache-manifest.f8dec9408987a40c7fd54358234ea3e2.js": "/Sushi-Gallery/precache-manifest.f8dec9408987a40c7fd54358234ea3e2.js",
+    "precache-manifest.0fc1298e56d826950bb7a3e41f6d4d2c.js": "/Sushi-Gallery/precache-manifest.0fc1298e56d826950bb7a3e41f6d4d2c.js",
     "service-worker.js": "/Sushi-Gallery/service-worker.js",
-    "static/css/main.a1bd2ab3.chunk.css.map": "/Sushi-Gallery/static/css/main.a1bd2ab3.chunk.css.map",
-    "static/js/2.1d567dc1.chunk.js.LICENSE": "/Sushi-Gallery/static/js/2.1d567dc1.chunk.js.LICENSE",
+    "static/css/main.bb4c0932.chunk.css.map": "/Sushi-Gallery/static/css/main.bb4c0932.chunk.css.map",
+    "static/js/2.c5bbe055.chunk.js.LICENSE.txt": "/Sushi-Gallery/static/js/2.c5bbe055.chunk.js.LICENSE.txt",
     "static/media/background5.jpg": "/Sushi-Gallery/static/media/background5.7fb0d49e.jpg",
-    "static/media/index.css": "/Sushi-Gallery/static/media/brownies.d8602e39.otf"
+    "static/media/index.css": "/Sushi-Gallery/static/media/brownies.d8602e39.otf",
+    "static/media/home1.jpg": "/Sushi-Gallery/static/media/home1.be348686.jpg",
+    "static/media/home2.jpg": "/Sushi-Gallery/static/media/home2.98149448.jpg",
+    "static/media/oki.jpg": "/Sushi-Gallery/static/media/oki.bbd2409a.jpg",
+    "static/media/wood2.jpg": "/Sushi-Gallery/static/media/wood2.4821f020.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.eb73472a.js",
-    "static/js/2.1d567dc1.chunk.js",
-    "static/css/main.a1bd2ab3.chunk.css",
-    "static/js/main.03ba57f9.chunk.js"
+    "static/js/runtime-main.a147124f.js",
+    "static/js/2.c5bbe055.chunk.js",
+    "static/css/main.bb4c0932.chunk.css",
+    "static/js/main.f28f5926.chunk.js"
   ]
 }
