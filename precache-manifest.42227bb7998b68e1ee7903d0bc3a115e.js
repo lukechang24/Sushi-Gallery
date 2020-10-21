@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "66cdcf287562b375701d71c93850ad93",
+    "revision": "4561bc3a63cca0e9477b6624ff8c9de4",
     "url": "/Sushi-Gallery/index.html"
   },
   {
-    "revision": "3fbe2b95da139b187e2b",
+    "revision": "6939fcb9508847ccfafa",
     "url": "/Sushi-Gallery/static/css/main.bb4c0932.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Sushi-Gallery/static/js/2.c5bbe055.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3fbe2b95da139b187e2b",
-    "url": "/Sushi-Gallery/static/js/main.dbc805f5.chunk.js"
+    "revision": "6939fcb9508847ccfafa",
+    "url": "/Sushi-Gallery/static/js/main.95b37fef.chunk.js"
   },
   {
     "revision": "28c993cfb03860ff7c87",
