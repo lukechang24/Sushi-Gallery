@@ -9,7 +9,7 @@ const SmallNav = (props) => {
     return(
         <S.Navbar>
             <S.TitleDiv>
-                <S.Title to="/">Sushi Gallery</S.Title>
+                <S.Title onClick={exitNav} to="/">Sushi Gallery</S.Title>
                 <S.Hours>
                     Mon – Sat : 11:30AM – 2:30PM & 5:00PM - 9:00PM<br/>
                     Sun : Closed

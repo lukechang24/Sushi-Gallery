@@ -20,9 +20,9 @@ S.Navbar = styled.div`
     @media only screen and (max-width: 650px) {
         width: 350px;
     }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 400px) {
         width: 300px;
-        margin-left: 15px;
+        margin-left: 2.5%;
     }
 `
 

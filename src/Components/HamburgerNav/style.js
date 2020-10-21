@@ -2,6 +2,25 @@ import styled from "styled-components"
 
 const S = {}
 
+S.TitleContainer = styled.div`
+    position: fixed;
+    display: none;
+    justify-content: center;
+    width: 100%;
+    background-color: #0C1821;
+    z-index: 500;
+    @media only screen and (max-width: 1040px) {
+        display: flex;
+    }
+`
+
+S.Title = styled.h1`
+    font-family: "Brownies";
+    color: white;
+    letter-spacing: 2px;
+    margin: 5px 0 7.5px;
+`
+
 S.Hamburger = styled.div`
     display: none;
     position: fixed;
@@ -11,7 +30,7 @@ S.Hamburger = styled.div`
     height: 45px;
     width: 45px;
     z-index: 3;
-    background-color: black;
+    background-color: #0C1821;
     &.active {
         & :nth-child(1) {
             transform: translate(0, 8px) rotate(45deg);

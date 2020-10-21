@@ -22,7 +22,7 @@ S.Container1 = styled.div`
         width: 100%;
         /* background-size: 350px; */
     }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 400px) {
         /* background-size: 300px; */
     }
 `
@@ -99,9 +99,11 @@ S.TitleDiv = styled.div`
     box-shadow: ${props => props.color === "true" ? "12.5px 10px 10px rgb(44,43,47), -12.5px 10px 10px rgb(44,43,47)" : "none"};
     z-index: -1;
     @media only screen and (max-width: 1040px) {
+        position: relative;
+        top: 25px;
         width: 60%;
         padding: 0 3%;        
-        margin-top: 50px;
+        margin-top: 75px;
     }
     @media only screen and (max-width: 700px) {
         width: 80%;
@@ -138,7 +140,7 @@ S.Message = styled.small`
 S.DotDiv = styled.div`
     display: none;
     position: absolute;
-    top: 25px;
+    top: 75px;
     justify-content: center;
     @media only screen and (max-width: 1040px) {
         display: flex;
@@ -162,6 +164,7 @@ S.ArrowDiv = styled.div`
     left: ${props => props.left ? props.left : null};
     right: ${props => props.right ? props.right : null};
     top: calc(100vh / 2);
+    z-index: 5;
     display: none;
     @media only screen and (max-width: 1040px) {
         display: flex;

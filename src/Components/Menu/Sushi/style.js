@@ -14,6 +14,8 @@ S.Container1 = styled.div`
     margin-bottom: 50px;
     box-shadow: 12.5px 12.5px 10px rgb(44,43,47), -12.5px 12.5px 10px rgb(44,43,47);
     @media only screen and (max-width: 1040px) {
+        position: relative;
+        top: 25px;
         width: 60%;
         padding: 0 3% 15px;
     }

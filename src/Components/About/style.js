@@ -6,23 +6,24 @@ const S = {}
 
 S.Container1 = styled.div`
     position: relative;
-    background: white url(${background});
-    background-size: 400px;
-    background-repeat: repeat;
     width: 75%;
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: white url(${background});
+    background-size: 400px;
+    background-repeat: repeat;
+    min-height: 100vh;
     z-index: 1;
     @media only screen and (max-width: 1040px) {
         width: 100%;
+        margin-top: 25px;
     }
 `
 
 S.Container2 = styled.div`
     width: 80%;
-    min-height: 80%;
+    min-height: 75%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -45,6 +46,9 @@ S.TextContainer = styled.div`
     @media only screen and (max-width: 700px) {
         width: 80%;
     }
+    @media only screen and (max-width: 400px) {
+        width: 90%;
+    }
 `
 
 S.Title = styled.h1`
@@ -64,7 +68,7 @@ S.About = styled.p`
     }
     @media only screen and (max-width: 700px) {
         /* font-size: 10px; */
-        line-height: 2;
+        line-height: 1.75;
     }
 `
 
@@ -74,6 +78,10 @@ S.Picture = styled.img`
     @media only screen and (max-width: 700px) {
         width: 50%;
         margin: 25px 0 30px;
+    }
+    @media only screen and (max-width: 400px) {
+        width: 50%;
+        margin-bottom: 10px;
     }
 `
 

@@ -5,7 +5,8 @@ import S from "./style"
 
 const HamburgerNav = (props) => {
     return(
-        <>
+        <S.TitleContainer>
+            <S.Title>Sushi Gallery</S.Title>
             <S.Hamburger id="hamburger" onClick={props.handleNav}>
                 <S.Line></S.Line>
                 <S.Line></S.Line>
@@ -20,7 +21,7 @@ const HamburgerNav = (props) => {
                     :
                         null
             }
-        </>
+        </S.TitleContainer>
     )
 }
 
