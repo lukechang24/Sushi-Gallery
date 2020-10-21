@@ -44,10 +44,10 @@ S.DeliveryLink = styled.a`
 
 S.DeliveryImage = styled.img`
     width: 250px;
-    border: 5px solid transparent;
-    border-radius: 30px;
+    border: 2px solid transparent;
     :hover {
-        border: 5px solid black;
+        width: 260px;
+        border: none;
     }
 `
 
