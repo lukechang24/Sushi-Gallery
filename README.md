@@ -2,7 +2,7 @@
 
 # SUSHI GALLERY
 A website I made to showcase my parent's restaurant, Sushi Gallery.
-https://lukechang24.github.io/menu
+https://lukechang24.github.io/Sushi-Gallery/
 
 # LANGUAGES USED
 Javascript, CSS, HTML, ReactJs, Firebase(firestore, storage)
