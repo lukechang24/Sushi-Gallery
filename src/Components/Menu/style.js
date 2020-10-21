@@ -51,6 +51,7 @@ S.Sign = styled.div`
     }
     &:hover {
         transform: translate(0, 7.5px);
+        cursor: pointer;
     }
 `
 
