@@ -8,7 +8,7 @@ S.Navbar = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: 400px;
+    width: 25%;
     height: 100vh;
     background-color: #0C1821;
     /* background-image: linear-gradient(to bottom right, hsl(206, 47%, 5%), hsl(206, 47%, 10%), hsl(206, 47%, 20%)); */
@@ -16,7 +16,7 @@ S.Navbar = styled.div`
     align-items: center;
     flex-direction: column;
     @media only screen and (max-width: 1300px) {
-        width: 350px;
+        width: 30%;
     }
     @media only screen and (max-width: 1040px) {
         display: none;
@@ -26,6 +26,7 @@ S.Navbar = styled.div`
 S.TitleDiv = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 50px;
 `
 
@@ -96,21 +97,21 @@ S.Hours = styled.p`
 `
 
 S.Location = styled.a`
-    width: 75%;
-    font-size: 15px;
+    width: 100%;
+    font-size: 13px;
     word-spacing: 5px;
-    color: white;
+    color: #C8C8C8;
     text-align: center;
     margin: 10px 0;
 `
 
 S.PhoneNumber = styled.a`
-    font-size: 15px;
+    font-size: 20px;
     color: white;
 `
 
 S.PhoneIcon = styled(Phone)`
-    width: 15px;
+    width: 25px;
     margin: 0 5px;
 `
 

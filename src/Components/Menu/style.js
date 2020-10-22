@@ -6,7 +6,7 @@ const S = {}
 
 S.Container1 = styled.div`
     position: relative;
-    width: calc(100vw - 400px);
+    width: 75%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@ S.Container1 = styled.div`
     background-repeat: repeat;
     z-index: 1;
     @media only screen and (max-width: 1300px) {
-        width: calc(100vw - 350px);
+        width: 70%;
     }
     @media only screen and (max-width: 1040px) {
         width: 100%;
@@ -114,7 +114,7 @@ S.TitleDiv = styled.div`
 `
 
 S.Title = styled.h2`
-    font-family: 'Mansalva', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     text-align: center;
     padding: 10px 0 0;
@@ -128,13 +128,6 @@ S.Title = styled.h2`
         font-size: 25px;
     }
     display: ${props => props.tab === "Rolls" ? "none" : "block"};
-`
-
-S.Message = styled.small`
-    font-family: 'Work Sans', sans-serif;
-    font-style: italic;
-    /* color: #565656; */
-    margin: 10px 0;
 `
 
 S.DotDiv = styled.div`

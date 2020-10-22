@@ -63,6 +63,8 @@ const Rolls = (props) => {
     return(
         <S.Container1>
             <S.SubCatergory isRoll="true">FRESH ROLLS</S.SubCatergory>
+            <S.Message1><S.MouseIcon></S.MouseIcon>hover to show more information</S.Message1>
+            <S.Message2><S.TouchIcon></S.TouchIcon>touch to show more information</S.Message2>
             <S.RollContainer>{freshRollsList}</S.RollContainer>
             <S.SubCatergory isRoll="true">COOKED ROLLS</S.SubCatergory>
             <S.RollContainer>{cookedRollsList}</S.RollContainer>

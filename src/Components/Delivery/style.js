@@ -15,6 +15,9 @@ S.Container1 = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 1;
+    @media only screen and (max-width: 1300px) {
+        width: 70%;
+    }
     @media only screen and (max-width: 1040px) {
         width: 100%;
     }

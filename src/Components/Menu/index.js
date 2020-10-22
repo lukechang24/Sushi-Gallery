@@ -13,7 +13,7 @@ import S from "./style"
 
 class Menu extends Component {
     state = {
-        tabs: ["Rolls", "Sides", "Nigiri Sushi", "Combinations", "Others", "Beverages"],
+        tabs: ["Rolls", "Combinations", "Nigiri Sushi", "Sides", "Others", "Beverages"],
         currentTab: "Rolls",
         data: {},
         loading: true,
@@ -22,7 +22,7 @@ class Menu extends Component {
     componentDidMount() {
         Tabletop.init(
             {
-                key: '1FrbltyDxYZzZ2AH90UZN91dCfjqS-fbHCfbf0vldBkE',
+                key: `${process.env.REACT_APP_KEY}`,
                 callback: googleData => {
                     // console.log(googleData, "here")
                     const data = googleData
@@ -102,9 +102,9 @@ class Menu extends Component {
                 <S.Overlay></S.Overlay>
                 <S.DotDiv>
                     <S.Dot name="Rolls" className={this.state.currentTab === "Rolls" ? "black" : null} onClick={this.changeTab}></S.Dot>
-                    <S.Dot name="Sides" className={this.state.currentTab === "Sides" ? "black" : null} onClick={this.changeTab}></S.Dot>
-                    <S.Dot name="Nigiri Sushi" className={this.state.currentTab === "Nigiri Sushi" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Combinations" className={this.state.currentTab === "Combinations" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Nigiri Sushi" className={this.state.currentTab === "Nigiri Sushi" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Sides" className={this.state.currentTab === "Sides" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Others" className={this.state.currentTab === "Others" ? "black" : null} onClick={this.changeTab}></S.Dot>
                     <S.Dot name="Beverages" className={this.state.currentTab === "Beverages" ? "black" : null} onClick={this.changeTab}></S.Dot>
                 </S.DotDiv>
@@ -126,7 +126,7 @@ class Menu extends Component {
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Sides" onClick={this.changeTab}>SIDES</S.TabName>
+                            <S.TabName name="Combinations" onClick={this.changeTab}>COMBINATONS</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
@@ -140,7 +140,7 @@ class Menu extends Component {
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Combinations" onClick={this.changeTab}>COMBINATONS</S.TabName>
+                            <S.TabName name="Sides" onClick={this.changeTab}>SIDES</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
@@ -161,13 +161,6 @@ class Menu extends Component {
                 <S.TitleDiv className={this.state.loading ? "hide" : ""} color={this.state.currentTab === "Rolls" ? "false" : "true"}>
                     <S.Title tab={this.state.currentTab}>{this.state.currentTab.toUpperCase()}</S.Title>
                 </S.TitleDiv>
-                {/* {
-                    this.state.currentTab === "Fresh Rolls" || this.state.currentTab === "Cooked Rolls"
-                        ?
-                            <S.Message>*hover to see more details</S.Message>
-                        :
-                            null
-                } */}
                 {
                     this.state.loading
                         ?
@@ -177,18 +170,18 @@ class Menu extends Component {
                         ?
                             <Rolls freshRolls={this.state.data.freshRolls} cookedRolls={this.state.data.cookedRolls}/>
                         :
-                    this.state.currentTab === "Sides"
+                    this.state.currentTab === "Combinations"
                         ?
-                            <Sides data={this.state.data} sides={this.state.data.sides}/>
+                            <Combinations entrees={this.state.data.entrees} bentos={this.state.data.bentos} sushiCombos={this.state.data.sushiCombo}></Combinations>
                         :
                     this.state.currentTab === "Nigiri Sushi"
                         ?
                             <Sushi data={this.state.data} sushi={this.state.data.sushi}/>
                         :
-                    this.state.currentTab === "Combinations"
-                        ?
-                            <Combinations entrees={this.state.data.entrees} bentos={this.state.data.bentos} sushiCombos={this.state.data.sushiCombo}></Combinations>
-                        :
+                    this.state.currentTab === "Sides"
+                    ?
+                        <Sides data={this.state.data} sides={this.state.data.sides}/>
+                    :
                     this.state.currentTab === "Others"
                         ?
                             <Others sides={this.state.data.sides} noodles={this.state.data.noodles} salads={this.state.data.salads} donburi={this.state.data.donburi} partyTrays={this.state.data.partyTrays} desserts={this.state.data.desserts}/>

@@ -1,4 +1,7 @@
 import styled, { keyframes } from "styled-components"
+import { Mouse } from "@styled-icons/entypo/Mouse"
+import { TouchApp } from "@styled-icons/material/TouchApp"
+
 
 const S = {}
 
@@ -20,11 +23,12 @@ S.Container1 = styled.div`
 
 S.SubCatergory = styled.h3`
     height: 55px;
-    font-family: 'Mansalva', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: ${props => props.isRoll === "true" ? "40px" : "30px"};
     font-weight: lighter;
-    border-bottom: 3.5px solid black;
-    margin: 25px 0 50px;
+    color: white;
+    border-bottom: 3.5px solid white;
+    margin: 25px 0;
     @media only screen and (max-width: 700px) {
         height: 35px;
         font-size: 25px;
@@ -49,7 +53,7 @@ S.RollContainer = styled.div`
 
 S.Roll = styled.div`
     box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
     /* width: 100%; */
     height: 250px;
@@ -125,10 +129,53 @@ S.Price = styled.p`
         font-size: 10px;
     }
 `
+S.Message1 = styled.span`
+    width: 100%;
+    font-family: 'Piazzolla', serif;
+    font-size: 20px;
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 25px;
+    @media only screen and (max-width: 700px) {
+        display: none;
+        font-size: 12.5px;
+    }
+`
+
+S.Message2 = styled.span`
+    width: 100%;
+    font-family: 'Piazzolla', serif;
+    font-size: 20px;
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 15px;
+    display: none;
+    @media only screen and (max-width: 700px) {
+        display: inline;
+        font-size: 12.5px;
+    }
+`
+
+S.MouseIcon = styled(Mouse)`
+    width: 20px;
+    color: white;
+    margin-right: 5px;
+    margin-bottom: 5px;
+`
+
+S.TouchIcon = styled(TouchApp)`
+    width: 15px;
+    color: white;
+    margin-right: 5px;
+    margin-bottom: 5px;
+`
 
 S.Bold = styled.span`
     color: hsl(0, 100%, 30%);
     font-weight: bolder;
 `
+
 
 export default S

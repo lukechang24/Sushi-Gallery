@@ -15,6 +15,9 @@ S.Container1 = styled.div`
     background-repeat: repeat;
     min-height: 100vh;
     z-index: 1;
+    @media only screen and (max-width: 1300px) {
+        width: 70%;
+    }
     @media only screen and (max-width: 1040px) {
         width: 100%;
         margin-top: 25px;

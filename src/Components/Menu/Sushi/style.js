@@ -49,6 +49,7 @@ S.List = styled.ul`
 `
 
 S.SubCatergory = styled.h3`
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 30px;
     font-weight: lighter;
@@ -120,7 +121,6 @@ S.Message = styled.span`
     @media only screen and (max-width: 700px) {
         font-size: 12.5px;
     }
-    
 `
 
 
