@@ -10,10 +10,6 @@ const SmallNav = (props) => {
         <S.Navbar>
             <S.TitleDiv>
                 <S.Title onClick={exitNav} to="/">Sushi Gallery</S.Title>
-                <S.Hours>
-                    Mon – Sat : 11:30AM – 2:30PM & 5:00PM - 9:00PM<br/>
-                    Sun : Closed
-                </S.Hours>
             </S.TitleDiv>
             <S.LinkContainer>
                 <S.Link onClick={exitNav} to="/menu">MENU</S.Link>
@@ -25,8 +21,14 @@ const SmallNav = (props) => {
                 <S.Circle></S.Circle>
                 <S.Icon href="https://www.instagram.com/sushigallery007/" target="_blank" title="Instagram" color="white" className="fab fa-instagram"></S.Icon>
             </S.SocialContainer>
-            <S.Location href="https://www.google.com/maps/place/16436+Norwalk+Blvd,+Cerritos,+CA+90703/@33.8809807,-118.0744492,17z/data=!3m1!4b1!4m5!3m4!1s0x80dd2d193db815cd:0x8384f6c6b8a569ea!8m2!3d33.8809807!4d-118.0722605" target="_blank">16436 Norwalk Blvd Cerritos, CA 90703</S.Location>
-            <S.PhoneNumber href="tel:562-926-6556"><S.PhoneIcon></S.PhoneIcon>(562) 926-6556</S.PhoneNumber>
+            <S.InformationContainer>
+                <S.PhoneNumber href="tel:562-926-6556"><S.PhoneIcon></S.PhoneIcon>(562) 926-6556</S.PhoneNumber>
+                <S.Location href="https://www.google.com/maps/place/16436+Norwalk+Blvd,+Cerritos,+CA+90703/@33.8809807,-118.0744492,17z/data=!3m1!4b1!4m5!3m4!1s0x80dd2d193db815cd:0x8384f6c6b8a569ea!8m2!3d33.8809807!4d-118.0722605" target="_blank">16436 Norwalk Blvd Cerritos, CA 90703</S.Location>
+                <S.Hours>
+                    Mon – Sat : 11:30AM – 2:30PM & 5:00PM - 9:00PM<br/>
+                    Sun : Closed
+                </S.Hours>
+            </S.InformationContainer>
         </S.Navbar>
     )
 }

@@ -93,31 +93,46 @@ S.Circle = styled.div`
     background-color: white;
 `
 
-S.Hours = styled.p`
-    font-size: 15px;
-    padding: 0 10px;
-    color: white;
-    text-align: center;
-`
-
-S.Location = styled.a`
-    width: 75%;
-    font-size: 15px;
-    word-spacing: 5px;
-    color: white;
-    text-align: center;
-    margin: 10px 0;
+S.InformationContainer = styled.div`
+    position: absolute;
+    bottom: 20px;
+    left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 `
 
 S.PhoneNumber = styled.a`
-    font-size: 15px;
+    font-size: 20px;
     color: white;
+    @media only screen and (max-width: 400px) {
+        font-size: 15px;
+    }
 `
 
 S.PhoneIcon = styled(Phone)`
-    width: 15px;
+    width: 20px;
     margin: 0 5px;
+    @media only screen and (max-width: 400px) {
+        width: 15px;
+    }
 `
 
+S.Location = styled.a`
+    width: 100%;
+    font-size: 15px;
+    word-spacing: 5px;
+    color: white;
+    margin: 10px 0;
+    @media only screen and (max-width: 400px) {
+        font-size: 15px;
+    }
+`
+
+
+S.Hours = styled.p`
+    font-size: 12.5px;
+    color: #C8C8C8;
+`
 
 export default S
