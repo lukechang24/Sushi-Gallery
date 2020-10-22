@@ -17,7 +17,7 @@ S.Navbar = styled.div`
     @media only screen and (max-width: 1040px) {
         width: 400px;
     }
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 700px) {
         width: 350px;
     }
     @media only screen and (max-width: 400px) {
@@ -34,7 +34,7 @@ S.TitleDiv = styled.div`
 
 S.Title = styled(NavLink)`
     font-family: "Brownies";
-    font-size: 40px;
+    font-size: 50px;
     letter-spacing: 2px;
     margin-top: 30px;
     color: white;

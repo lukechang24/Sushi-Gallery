@@ -33,7 +33,7 @@ S.TitleDiv = styled.div`
 S.Title = styled(NavLink)`
     font-family: "Brownies";
     letter-spacing: 2px;
-    font-size: 50px;
+    font-size: 65px;
     color: white;
     text-align: center;
     text-decoration: none;
