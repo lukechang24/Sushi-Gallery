@@ -25,7 +25,7 @@ S.Container1 = styled.div`
 `
 
 S.Container2 = styled.div`
-    font-family: 'Mansalva', sans-serif;
+    /* font-family: 'Mansalva', sans-serif; */
     width: 90%;
     min-height: 85vh;
     display: flex;
@@ -53,10 +53,12 @@ S.SubCatergory = styled.h3`
     text-align: center;
     font-size: 30px;
     font-weight: lighter;
+    padding: 10px 0;
     border: 3px solid black;
     margin-top: 50px;
     @media only screen and (max-width: 700px) {
-        font-size: 25px;
+        padding: 5px 0;
+        font-size: 20px;
     }
 `
 
@@ -92,11 +94,21 @@ S.Description = styled.p`
 S.Name = styled.p`
     font-weight: 600;
     text-align: ${props => props.isBento === "true" ? "center" : "left"};
-    margin: ${props => props.isBento ? "0 25px" : "none"};
+    margin: ${props => props.isBento === "true" ? "0 25px" : "none"};
     @media only screen and (max-width: 1040px) {
-        padding-right: 10px;
+        padding-right: ${props => props.half === "true" ? "0" : "10px"};
         margin-left: ${props => props.isBento ? "10px" : "none"};
     }
+    @media only screen and (max-width: 400px) {
+        font-size: ${props => props.isBento === "true" ? "12px" : "15px"};
+        margin: 0;
+        padding: 0;
+    }
+`
+
+S.PriceDiv = styled.div`
+    display: flex;
+    flex-direction: column;
 `
 
 S.Price = styled.p`
@@ -105,10 +117,28 @@ S.Price = styled.p`
     margin: ${props => props.margin ? props.margin : 0};
 `
 
-S.PriceDiv = styled.div`
+S.PictureContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 30px auto 0;
 `
+
+S.Picture = styled.img`
+    width: 250px;
+    @media only screen and (max-width: 400px) {
+        width: 200px;
+    }
+`
+
+S.PictureCaption = styled.p`
+    font-family: 'Piazzolla', serif;
+    font-style: italic;
+    @media only screen and (max-width: 400px) {
+        font-size: 12px;
+    }
+`
+
 
 S.Message = styled.span`
     font-family: 'Piazzolla', serif;

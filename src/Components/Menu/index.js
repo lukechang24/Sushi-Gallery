@@ -22,7 +22,7 @@ class Menu extends Component {
     componentDidMount() {
         Tabletop.init(
             {
-                key: `${process.env.REACT_APP_KEY}`,
+                key: `1FrbltyDxYZzZ2AH90UZN91dCfjqS-fbHCfbf0vldBkE`,
                 callback: googleData => {
                     // console.log(googleData, "here")
                     const data = googleData

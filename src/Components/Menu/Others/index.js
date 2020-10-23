@@ -30,6 +30,8 @@ const Others = (props) => {
         )
     })
     const partyTrays = props.partyTrays ? props.partyTrays.elements : []
+    const partyTrayUrl = partyTrays[0].url
+    const partyTrayCaption = partyTrays[0].name
     const partyTraysList = partyTrays.map((partyTray, i) => {
         return(
             <S.ItemDescriptionBox key={i}>
@@ -64,6 +66,10 @@ const Others = (props) => {
                     <S.SubCatergory>Donburi</S.SubCatergory>
                     {donburiList}
                     <S.SubCatergory>Party Trays</S.SubCatergory>
+                    {/* <S.PictureContainer>
+                        <S.Picture src={partyTrayUrl}></S.Picture>
+                        <S.PictureCaption>{partyTrayCaption}</S.PictureCaption>
+                    </S.PictureContainer> */}
                     {partyTraysList}
                     <S.SubCatergory>Desserts</S.SubCatergory>
                     {dessertsList}
