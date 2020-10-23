@@ -85,8 +85,12 @@ S.RollName = styled.h3`
     justify-content: center;
     background: black linear-gradient(to right, hsl(206, 47%, 10%), hsl(206, 47%, 25%), hsl(206, 47%, 10%));
     color: rgba(255,255,255);
+    text-align: center;
     @media only screen and (max-width: 700px) {
         font-size: 10px;
+    }
+    @media only screen and (max-width: 400px) {
+        font-size: 9px;
     }
 `
 
