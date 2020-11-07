@@ -17,7 +17,9 @@ class Menu extends Component {
         currentTab: "Rolls",
         data: {},
         loading: true,
-        lastPos: 0
+        lastPos: 0,
+        xDown: null,
+        yDown: null
     }
     componentDidMount() {
         Tabletop.init(
@@ -34,9 +36,53 @@ class Menu extends Component {
             }
         )
         window.addEventListener("scroll", this.throttle)
+        window.addEventListener('touchstart', this.handleTouchStart, false)
+        window.addEventListener('touchmove', this.handleTouchMove, false)
+        setTimeout(this.removeSwipeMessage, 750)
     }
     componentDidUpdate() {
         this.addHover()
+    }
+    getTouches = (e) => {
+        return e.touches
+    }
+
+    handleTouchStart = (e) => {
+        const firstTouch = this.getTouches(e)[0]
+        this.setState({
+            xDown: firstTouch.clientX,
+            yDown: firstTouch.clientY
+        })
+    }                                          
+    
+    handleTouchMove = (e) => {
+        if(!this.state.xDown || !this.state.yDown) {
+            return
+        }
+        var xUp = e.touches[0].clientX                           
+        var yUp = e.touches[0].clientY
+    
+        var xDiff = this.state.xDown - xUp
+        var yDiff = this.state.yDown- yUp
+    
+        if(Math.abs(xDiff) > Math.abs( yDiff)) {
+            if (xDiff > 0) {
+                this.nextTab("right")
+            } else {
+                this.nextTab("left")
+            }                       
+        } 
+        // else {
+        //     if (yDiff > 0) {
+        //         console.log("up swipe")
+        //     } else {
+        //         console.log("down swipe")
+        //     }
+        // }
+        this.setState({
+            xDown: null,
+            yDown: null
+        })
     }
     addHover = () => {
         const rolls = document.querySelectorAll(".roll")
@@ -49,7 +95,7 @@ class Menu extends Component {
             })
         })
     }
-    changeTab = (e) => {
+    selectTab = (e) => {
         const active = document.querySelectorAll(".active")
         if(active.length > 0) {
             for(let i = 0; i < active.length; i++) {
@@ -62,7 +108,7 @@ class Menu extends Component {
         })
         window.scrollTo(0, 0)
     }
-    removeTabs = () => {
+    hideTabs = () => {
         const tabs = document.querySelector(".tabs")
         if(!tabs) { return }
         if(window.scrollY > this.state.lastPos) {
@@ -76,7 +122,7 @@ class Menu extends Component {
     }
     throttle = () => {
         let time = Date.now()
-        let fn = this.removeTabs()
+        let fn = this.hideTabs()
         return function() {
             if((time + 75 - Date.now()) < 0) {
                 fn()
@@ -85,13 +131,24 @@ class Menu extends Component {
             }
         }     
     }
-    handleArrow = (e) => {
+    nextTab = (dir) => {
         const curIndex = this.state.tabs.indexOf(this.state.currentTab)
-        const curTab = e.target.id === "-" ? (curIndex === 0 ? this.state.tabs[this.state.tabs.length-1] : this.state.tabs[curIndex-1]) : curIndex === this.state.tabs.length-1 ? this.state.tabs[0] : this.state.tabs[curIndex+1]
+        const curTab = dir === "left" ? (curIndex === 0 ? this.state.tabs[this.state.tabs.length-1] : this.state.tabs[curIndex-1]) : curIndex === this.state.tabs.length-1 ? this.state.tabs[0] : this.state.tabs[curIndex+1]
         this.setState({
             currentTab: curTab
         })
         window.scrollTo(0, 0)
+    }
+    handleArrow = (e) => {
+        if(e.currentTarget.id === "-") {
+            this.nextTab("left")
+        } else {
+            this.nextTab("right")
+        }
+    }
+    removeSwipeMessage = () => {
+        const message = document.querySelector("#message")
+        message.style.opacity = "0"
     }
     componentWillUnmount() {
         window.removeEventListener("scroll", this.throttle)
@@ -100,61 +157,62 @@ class Menu extends Component {
         return(
             <S.Container1>
                 <S.Overlay></S.Overlay>
+                <S.Message id="message">SWIPE TO CHANGE TABS</S.Message>
                 <S.DotDiv>
-                    <S.Dot name="Rolls" className={this.state.currentTab === "Rolls" ? "black" : null} onClick={this.changeTab}></S.Dot>
-                    <S.Dot name="Combinations" className={this.state.currentTab === "Combinations" ? "black" : null} onClick={this.changeTab}></S.Dot>
-                    <S.Dot name="Nigiri Sushi" className={this.state.currentTab === "Nigiri Sushi" ? "black" : null} onClick={this.changeTab}></S.Dot>
-                    <S.Dot name="Sides" className={this.state.currentTab === "Sides" ? "black" : null} onClick={this.changeTab}></S.Dot>
-                    <S.Dot name="Others" className={this.state.currentTab === "Others" ? "black" : null} onClick={this.changeTab}></S.Dot>
-                    <S.Dot name="Beverages" className={this.state.currentTab === "Beverages" ? "black" : null} onClick={this.changeTab}></S.Dot>
+                    <S.Dot name="Rolls" className={this.state.currentTab === "Rolls" ? "black" : null} onClick={this.selectTab}></S.Dot>
+                    <S.Dot name="Combinations" className={this.state.currentTab === "Combinations" ? "black" : null} onClick={this.selectTab}></S.Dot>
+                    <S.Dot name="Nigiri Sushi" className={this.state.currentTab === "Nigiri Sushi" ? "black" : null} onClick={this.selectTab}></S.Dot>
+                    <S.Dot name="Sides" className={this.state.currentTab === "Sides" ? "black" : null} onClick={this.selectTab}></S.Dot>
+                    <S.Dot name="Others" className={this.state.currentTab === "Others" ? "black" : null} onClick={this.selectTab}></S.Dot>
+                    <S.Dot name="Beverages" className={this.state.currentTab === "Beverages" ? "black" : null} onClick={this.selectTab}></S.Dot>
                 </S.DotDiv>
-                <S.ArrowDiv left="5px">
-                    <S.LeftArrow className="fas fa-chevron-left" id="-" onClick={this.handleArrow}></S.LeftArrow>
+                <S.ArrowDiv id="-" onClick={this.handleArrow} left="-10px">
+                    <S.LeftArrow className="fas fa-chevron-left"></S.LeftArrow>
                 </S.ArrowDiv>
-                <S.ArrowDiv right="5px">
-                    <S.RightArrow className="fas fa-chevron-right" id="+" onClick={this.handleArrow}></S.RightArrow>
+                <S.ArrowDiv id="+" onClick={this.handleArrow} right="-10px">
+                    <S.RightArrow className="fas fa-chevron-right" ></S.RightArrow>
                 </S.ArrowDiv>
                 <S.TabContainer className="tabs">
                     <S.Sign className="active">
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Rolls" onClick={this.changeTab}>ROLLS</S.TabName>
+                            <S.TabName name="Rolls" onClick={this.selectTab}>ROLLS</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Combinations" onClick={this.changeTab}>COMBINATONS</S.TabName>
+                            <S.TabName name="Combinations" onClick={this.selectTab}>COMBINATONS</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Nigiri Sushi" onClick={this.changeTab}>NIGIRI SUSHI</S.TabName>
+                            <S.TabName name="Nigiri Sushi" onClick={this.selectTab}>NIGIRI SUSHI</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Sides" onClick={this.changeTab}>SIDES</S.TabName>
+                            <S.TabName name="Sides" onClick={this.selectTab}>SIDES</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Others" onClick={this.changeTab}>OTHERS</S.TabName>
+                            <S.TabName name="Others" onClick={this.selectTab}>OTHERS</S.TabName>
                         </S.Tab>
                     </S.Sign>
                     <S.Sign>
                         <S.Tab>
                             <S.Chain left></S.Chain>
                             <S.Chain></S.Chain>
-                            <S.TabName name="Beverages" onClick={this.changeTab}>BEVERAGES</S.TabName>
+                            <S.TabName name="Beverages" onClick={this.selectTab}>BEVERAGES</S.TabName>
                         </S.Tab>
                     </S.Sign>
                 </S.TabContainer>

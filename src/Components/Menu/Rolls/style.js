@@ -91,6 +91,7 @@ S.RollName = styled.h3`
     }
     @media only screen and (max-width: 400px) {
         font-size: 9px;
+        letter-spacing: -1px;
     }
 `
 
@@ -112,6 +113,9 @@ S.InfoTitle = styled.h2`
     margin: 0 0 5px;
     @media only screen and (max-width: 700px) {
         font-size: 12px;
+    }
+    @media only screen and (max-width: 700px) {
+        letter-spacing: -1px;
     }
 `
 

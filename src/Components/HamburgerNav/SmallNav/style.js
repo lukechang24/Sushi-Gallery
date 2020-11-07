@@ -100,6 +100,9 @@ S.InformationContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: start;
+    @media only screen and (max-height: 700px) {
+        margin-bottom: 20px;
+    }
 `
 
 S.PhoneNumber = styled.a`

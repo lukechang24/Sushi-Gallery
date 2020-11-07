@@ -156,12 +156,13 @@ S.ArrowDiv = styled.div`
     position: fixed;
     left: ${props => props.left ? props.left : null};
     right: ${props => props.right ? props.right : null};
-    top: calc(100vh / 2);
+    top: 50%;
+    width: 50px;
     z-index: 5;
     display: none;
     @media only screen and (max-width: 1040px) {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
     }
 `
 
@@ -197,6 +198,27 @@ S.Overlay = styled.div`
     background-color: white;
     opacity: 0.15;
     z-index: -2;
+`
+
+S.Message = styled.h3`
+    font-family: 'Piazzolla', serif;
+    position: fixed;
+    top: 50%;
+    font-size: 50px;
+    font-weight: light;
+    color: white;
+    margin: 0 auto;
+    opacity: 1;
+    z-index: 10;
+    transition: opacity 2.5s ease;
+    display: none;
+    @media only screen and (max-width: 700px) {
+        display: inline-block;
+        font-size: 30px;
+    }
+    @media only screen and (max-width: 400px) {
+        font-size: 20px;
+    }
 `
 
 export default S
