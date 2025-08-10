@@ -2,7 +2,7 @@ import React from "react"
 import S from "../Sushi/style"
 
 const Others = (props) => {
-    const noodles = props.noodles ? props.noodles.elements : []
+    const noodles = props.noodle ? props.noodle : []
     const noodlesList = noodles.map((noodle, i) => {
         return(
             <S.Item key={i}>
@@ -11,7 +11,7 @@ const Others = (props) => {
             </S.Item>
         )
     })
-    const salads = props.salads ? props.salads.elements : []
+    const salads = props.salad ? props.salad : []
     const saladsList = salads.map((salad, i) => {
         return(
             <S.Item key={i}>
@@ -20,7 +20,7 @@ const Others = (props) => {
             </S.Item>
         )
     })
-    const donburi = props.donburi ? props.donburi.elements : []
+    const donburi = props.donburi ? props.donburi : []
     const donburiList = donburi.map((donburi, i) => {
         return(
             <S.Item key={i}>
@@ -29,7 +29,7 @@ const Others = (props) => {
             </S.Item>
         )
     })
-    const partyTrays = props.partyTrays ? props.partyTrays.elements : []
+    const partyTrays = props.partyTray ? props.partyTray : []
     const partyTrayUrl = partyTrays[0].url
     const partyTrayCaption = partyTrays[0].name
     const partyTraysList = partyTrays.map((partyTray, i) => {
@@ -43,7 +43,7 @@ const Others = (props) => {
             </S.ItemDescriptionBox>
         )
     })
-    const desserts = props.desserts ? props.desserts.elements : []
+    const desserts = props.dessert ? props.dessert : []
     const dessertsList = desserts.map((dessert, i) => {
         return(
             <S.ItemDescriptionBox key={i}>
@@ -59,19 +59,19 @@ const Others = (props) => {
         <S.Container1>
             <S.Container2>
                 <S.List>
-                    <S.SubCatergory>Noodles</S.SubCatergory>
+                    <S.SubCategory>Noodles</S.SubCategory>
                     {noodlesList}
-                    <S.SubCatergory>Salads</S.SubCatergory>
+                    <S.SubCategory>Salads</S.SubCategory>
                     {saladsList}
-                    <S.SubCatergory>Donburi</S.SubCatergory>
+                    <S.SubCategory>Donburi</S.SubCategory>
                     {donburiList}
-                    <S.SubCatergory>Party Trays</S.SubCatergory>
+                    <S.SubCategory>Party Trays</S.SubCategory>
                     {/* <S.PictureContainer>
                         <S.Picture src={partyTrayUrl}></S.Picture>
                         <S.PictureCaption>{partyTrayCaption}</S.PictureCaption>
                     </S.PictureContainer> */}
                     {partyTraysList}
-                    <S.SubCatergory>Desserts</S.SubCatergory>
+                    <S.SubCategory>Desserts</S.SubCategory>
                     {dessertsList}
                 </S.List>
             </S.Container2>

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Tabletop from "tabletop"
 import { withRouter } from "react-router-dom"
+import menu from "./menu"
 
 import Rolls from "./Rolls"
 import Sides from "./Sides"
@@ -22,19 +23,11 @@ class Menu extends Component {
         yDown: null
     }
     componentDidMount() {
-        Tabletop.init(
-            {
-                key: `1FrbltyDxYZzZ2AH90UZN91dCfjqS-fbHCfbf0vldBkE`,
-                callback: googleData => {
-                    // console.log(googleData, "here")
-                    const data = googleData
-                    this.setState({
-                        data: googleData,
-                        loading: false
-                    })
-                },
-            }
-        )
+				this.setState({
+					data: { ...menu },
+					loading: false
+				})
+				console.log(this.state.data ,"ths")
         window.addEventListener("scroll", this.throttle)
         window.addEventListener('touchstart', this.handleTouchStart, false)
         window.addEventListener('touchmove', this.handleTouchMove, false)
@@ -226,25 +219,25 @@ class Menu extends Component {
                         :
                     this.state.currentTab === "Rolls"
                         ?
-                            <Rolls freshRolls={this.state.data.freshRolls} cookedRolls={this.state.data.cookedRolls}/>
+                            <Rolls freshRoll={this.state.data.freshRoll} cookedRoll={this.state.data.cookedRoll}/>
                         :
                     this.state.currentTab === "Combinations"
                         ?
-                            <Combinations entrees={this.state.data.entrees} bentos={this.state.data.bentos} sushiCombos={this.state.data.sushiCombo}></Combinations>
+                            <Combinations bento={this.state.data.bento} sushiCombo={this.state.data.sushiCombo}></Combinations>
                         :
                     this.state.currentTab === "Nigiri Sushi"
                         ?
-                            <Sushi data={this.state.data} sushi={this.state.data.sushi}/>
+                            <Sushi data={this.state.data} sushi={this.state.data.nigiri}/>
                         :
                     this.state.currentTab === "Sides"
                     ?
-                        <Sides data={this.state.data} sides={this.state.data.sides}/>
+                        <Sides data={this.state.data} side={this.state.data.side}/>
                     :
                     this.state.currentTab === "Others"
                         ?
-                            <Others sides={this.state.data.sides} noodles={this.state.data.noodles} salads={this.state.data.salads} donburi={this.state.data.donburi} partyTrays={this.state.data.partyTrays} desserts={this.state.data.desserts}/>
+                            <Others side={this.state.data.side} noodle={this.state.data.noodle} salad={this.state.data.salad} donburi={this.state.data.donburi} partyTray={this.state.data.partyTray} dessert={this.state.data.dessert}/>
                         :
-                            <Beverages beverages={this.state.data.beverages}/>
+                            <Beverages beverage={this.state.data.beverage}/>
                     }
             </S.Container1>
         )

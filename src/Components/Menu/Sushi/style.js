@@ -48,7 +48,15 @@ S.List = styled.ul`
     }
 `
 
-S.SubCatergory = styled.h3`
+S.Category = styled.h2`
+    font-family: 'Piazzolla', serif;
+    text-align: center;
+		font-size: 20px;
+    font-weight: 600;
+    padding: 50px 0 0;
+`
+
+S.SubCategory = styled.h3`
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 30px;
@@ -92,7 +100,7 @@ S.Description = styled.p`
 `
 
 S.Name = styled.p`
-    font-weight: 600;
+    font-weight: ${props => props.isBento === "true" ? "500" : "600"};
     text-align: ${props => props.isBento === "true" ? "center" : "left"};
     margin: ${props => props.isBento === "true" ? "0 25px" : "none"};
     @media only screen and (max-width: 1040px) {

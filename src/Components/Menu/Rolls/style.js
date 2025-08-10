@@ -21,7 +21,7 @@ S.Container1 = styled.div`
     align-items: center;
 `
 
-S.SubCatergory = styled.h3`
+S.SubCategory = styled.h3`
     height: 55px;
     font-family: 'Montserrat', sans-serif;
     font-size: ${props => props.isRoll === "true" ? "40px" : "30px"};

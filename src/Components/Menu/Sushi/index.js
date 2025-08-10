@@ -2,7 +2,8 @@ import React from "react"
 import S from "./style"
 
 const Sushi = (props) => {
-    const sushi = props.sushi ? props.sushi.elements : []
+    const sushi = props.sushi ? props.sushi : []
+		console.log(props, "hi")
     const sushiList = sushi.map((sushi, i) => {
         const newName = sushi.name.split("").map((letter, i, arr) => arr.indexOf("(") < i && arr.indexOf("(") >= 0 ? letter : letter.toUpperCase()).join("")
         return(

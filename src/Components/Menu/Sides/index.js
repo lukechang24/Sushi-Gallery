@@ -2,7 +2,7 @@ import React from "react"
 import S from "../Sushi/style"
 
 const Sides = (props) => {
-    const sides = props.sides ? props.sides.elements : []
+    const sides = props.side ? props.side : []
     const sidesList = sides.map((side, i) => {
         const newName = side.name.split("").map((letter, i, arr) => arr.indexOf("(") < i && arr.indexOf("(") >= 0 ? letter : letter.toUpperCase()).join("")
         return(
